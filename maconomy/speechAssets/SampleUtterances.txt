@@ -1,0 +1,9 @@
+DailyTimeIntent say hello
+DailyTimeIntent say hello world
+DailyTimeIntent hello
+DailyTimeIntent say hi
+DailyTimeIntent say hi world
+DailyTimeIntent hi
+DailyTimeIntent how are you
+DailyTimeIntent get time for {day}
+DailyTimeIntent to register {hour} hours for {day}
