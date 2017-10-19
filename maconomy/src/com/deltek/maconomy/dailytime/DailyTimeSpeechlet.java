@@ -26,10 +26,16 @@ import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
 import com.amazon.speech.ui.SimpleCard;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * This sample shows how to create a simple speechlet for handling speechlet requests.
@@ -38,29 +44,11 @@ public class DailyTimeSpeechlet implements Speechlet {
     private static final Logger log = LoggerFactory.getLogger(DailyTimeSpeechlet.class);
 
     /**
-     * Constant defining session attribute key for the intent slot key for the date of events.
+     * Constant defining attribute key for the intent slot key.
      */
-    private static final String SLOT_DAY = "day";
-
-    private static final String SLOT_HOUR = "hour";
-
-    /**
-     * Array of month names.
-     */
-    private static final String[] MONTH_NAMES = {
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-    };
+    private static final String SLOT_HOUR = "hourValue";
+    private static final String SLOT_DIST = "mileValue";
+    private static final String SLOT_DATE = "dateValue";
 
     @Override
     public void onSessionStarted(final SessionStartedRequest request, final Session session)
@@ -88,7 +76,11 @@ public class DailyTimeSpeechlet implements Speechlet {
         String intentName = (intent != null) ? intent.getName() : null;
 
         if ("DailyTimeIntent".equals(intentName)) {
-            return getHelloResponse(intent);
+            return insertDailyTime(intent);
+        } else if ("ExpenseIntent".equals(intentName)) {
+            return insertExpense(intent);
+        } else if ("CashReceiptsIntent".equals(intentName)) {
+            return getCashReceipts(intent);
         } else if ("AMAZON.HelpIntent".equals(intentName)) {
             return getHelpResponse();
         } else {
@@ -110,11 +102,11 @@ public class DailyTimeSpeechlet implements Speechlet {
      * @return SpeechletResponse spoken and visual response for the given intent
      */
     private SpeechletResponse getWelcomeResponse() {
-        String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
+        String speechText = "Welcome to the Maconomy Alexa Skill, you can register hours or mileage on a job";
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
-        card.setTitle("HelloWorld");
+        card.setTitle("DailyTime");
         card.setContent(speechText);
 
         // Create the plain text output.
@@ -129,26 +121,94 @@ public class DailyTimeSpeechlet implements Speechlet {
     }
 
     /**
-     * Creates a {@code SpeechletResponse} for the hello intent.
+     * Creates a {@code SpeechletResponse} for the DailyTime intent.
      *
      * @return SpeechletResponse spoken and visual response for the given intent
      */
-    private SpeechletResponse getHelloResponse(Intent intent) {
-        Integer hours = getHours(intent);
+    private SpeechletResponse insertDailyTime(Intent intent) {
+        Double hours = getHours(intent);
         log.info("received {} hours", hours);
-        Calendar calendar = getCalendar(intent);
-        String month = Integer.toString(calendar.get(Calendar.MONTH));
-        //String month = MONTH_NAMES[intMonth];
-        String date = Integer.toString(calendar.get(Calendar.DATE));
-        String year = Integer.toString(calendar.get(Calendar.YEAR));
-        String dateVar = year+"-"+month+"-"+date;
-        String employeeName = WebServiceClient.getDailyTime("23035", dateVar, hours);
-        log.info("getHelloResponse employeeName={}", employeeName);
-        String speechText = "Hello world " + employeeName;
+        String dateVar = getDate(intent);
+        log.info("received date {}", dateVar);
+
+        String jobNumber = "1040010";
+        String taskName = "TM";
+        String status = WebServiceClient.insertDailyTime("23035", dateVar, hours, jobNumber, taskName);
+        log.info("insertDailyTime request status={}", status);
+        StringBuilder sb = new StringBuilder();
+        if(status.equalsIgnoreCase("OK")){
+            sb.append("Great, I was able to register the time you requested. You can login to Maconomy to view your updated timesheet.");
+        }else{
+            sb.append("Sorry, something went wrong. I was unable to register the time you requested.");
+        }
+        String speechText = sb.toString();
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
-        card.setTitle("HelloWorld");
+        card.setTitle("DailyTime");
+        card.setContent(speechText);
+
+        // Create the plain text output.
+        PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
+        speech.setText(speechText);
+
+        return SpeechletResponse.newTellResponse(speech, card);
+    }
+
+    /**
+     * Creates a {@code SpeechletResponse} for the Expense intent.
+     *
+     * @return SpeechletResponse spoken and visual response for the given intent
+     */
+    private SpeechletResponse insertExpense(Intent intent) {
+        Integer miles = getMiles(intent);
+        log.info("received {} miles", miles);
+
+        String expenseSheetNumber = "1700000";
+        String taskName = "Travel Expenses";
+        String jobNumber = WebServiceClient.insertExpense(expenseSheetNumber, taskName, miles.doubleValue());
+        log.info("insertExpense request jobNumber={}", jobNumber);
+        StringBuilder sb = new StringBuilder();
+        if(!jobNumber.isEmpty()){
+            sb.append(miles.toString() + " miles have been recorded on your current expense sheet for job " + jobNumber + " for Vandalay industries");
+        }else{
+            sb.append("Sorry, something went wrong. I was unable to register the expense you requested.");
+        }
+        String speechText = sb.toString();
+
+        // Create the Simple card content.
+        SimpleCard card = new SimpleCard();
+        card.setTitle("Expense");
+        card.setContent(speechText);
+
+        // Create the plain text output.
+        PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
+        speech.setText(speechText);
+
+        return SpeechletResponse.newTellResponse(speech, card);
+    }
+
+    /**
+     * Creates a {@code SpeechletResponse} for the CashReceipts intent.
+     *
+     * @return SpeechletResponse spoken and visual response for the given intent
+     */
+    private SpeechletResponse getCashReceipts(Intent intent) {
+        String toDate = getDate(intent);
+        log.info("received toDate {}", toDate);
+
+        String fromDate = getFromDate(intent);
+        log.info("received fromDate {}", fromDate);
+
+        String customerNumber = "110060";
+        String result = WebServiceClient.getCashReceipts(customerNumber, toDate, fromDate);
+        log.info("getCashReceipts result ={}", result);
+
+        String speechText = result.isEmpty()?"Sorry, I was unable to find any cash receipts": result;
+
+        // Create the Simple card content.
+        SimpleCard card = new SimpleCard();
+        card.setTitle("CashReceipts");
         card.setContent(speechText);
 
         // Create the plain text output.
@@ -164,11 +224,11 @@ public class DailyTimeSpeechlet implements Speechlet {
      * @return SpeechletResponse spoken and visual response for the given intent
      */
     private SpeechletResponse getHelpResponse() {
-        String speechText = "You can say hello to me!";
+        String speechText = "You can ask Maconomy to register 5 hours for October twentieth";
 
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
-        card.setTitle("HelloWorld");
+        card.setTitle("DailyTime");
         card.setContent(speechText);
 
         // Create the plain text output.
@@ -183,45 +243,128 @@ public class DailyTimeSpeechlet implements Speechlet {
     }
 
     /**
-     * Function to accept an intent containing a Day slot (date object) and return the Calendar
+     * Function to accept an intent containing a Day slot (date object) and return the String
      * representation of that slot value. If the user provides a date, then use that, otherwise use
-     * today. The date is in server time, not in the user's time zone. So "today" for the user may
-     * actually be tomorrow.
+     * today.
      *
      * @param intent
      *            the intent object containing the day slot
      * @return the Calendar representation of that date
      */
-    private Calendar getCalendar(Intent intent) {
-        Slot daySlot = intent.getSlot(SLOT_DAY);
-        Date date;
-        Calendar calendar = Calendar.getInstance();
+    private String getDate(Intent intent) {
+        Slot daySlot = intent.getSlot(SLOT_DATE);
+        LocalDate date;
         if (daySlot != null && daySlot.getValue() != null) {
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String slotValue = daySlot.getValue();
             try {
-                date = dateFormat.parse(daySlot.getValue());
-            } catch (ParseException e) {
-                date = new Date();
+                date = LocalDate.parse(slotValue, DateTimeFormatter.ISO_LOCAL_DATE);
+            } catch (DateTimeParseException e) {
+                log.error("Unable to parse slotValue {} to date", slotValue);
+                log.error(e.getMessage());
+                date = LocalDate.now();
             }
         } else {
-            date = new Date();
+            date = LocalDate.now();
         }
-        calendar.setTime(date);
-        return calendar;
+        return date.toString();
     }
 
-    private Integer getHours(Intent intent){
-        Slot hourSlot = intent.getSlot(SLOT_HOUR);
-        Integer hours = 0;
-        if(hourSlot != null && hourSlot.getValue() != null){
-            try {
-                hours = Integer.parseInt(hourSlot.getValue());
-            } catch (NumberFormatException e){
-                hours = 0;
+    private String getFromDate(Intent intent){
+        Slot dateSlot = intent.getSlot(SLOT_DATE);
+        LocalDate date;
+        if (dateSlot != null && dateSlot.getValue() != null) {
+            String slotValue = dateSlot.getValue();
+            if(slotValue.matches("\\d{4}-W\\d{2}")){
+                try {
+                    date = LocalDate.parse(slotValue+"-1", DateTimeFormatter.ISO_WEEK_DATE);
+                    return date.toString();
+                }catch (DateTimeParseException e){
+                    log.error("Unable to parse slotValue {} to date", slotValue);
+                    log.error(e.getMessage());
+                    return "";
+                }
+            }else{
+                return "";
             }
         }else{
-            hours = 0;
+            return "";
         }
-        return hours;
+    }
+
+    private Double getHours(Intent intent){
+        Slot hourSlot = intent.getSlot(SLOT_HOUR);
+        String hours = "PT0H";
+        if(hourSlot != null && hourSlot.getValue() != null){
+            try {
+                hours = hourSlot.getValue();
+            } catch (NumberFormatException e){
+                hours = "PT0H";
+            }
+        }else{
+            hours = "PT0H";
+        }
+        log.info("obtained following slot value for hours from intent:{}", hours);
+
+        DecimalFormat decimalFormat = new DecimalFormat("#.00");
+        Double hoursDouble = 0.0;
+        try {
+            Duration duration = Duration.parse(hours);
+            Long minutes = duration.toMinutes();
+            Double minutesDouble = minutes.doubleValue();
+            hoursDouble = Double.parseDouble(decimalFormat.format(minutesDouble/60));
+        }catch (Exception e){
+            log.error("Could not convert hours to double: " + e.getMessage());
+        }
+        return hoursDouble;
+    }
+
+    private Integer getMiles(Intent intent){
+        Slot mileSlot = intent.getSlot(SLOT_DIST);
+        Integer miles = 50;
+        if(mileSlot != null && mileSlot.getValue() != null){
+            String slotValue = mileSlot.getValue();
+            log.info("obtained following slot value for miles from intent:{}", slotValue);
+            Integer mileValue = getMileValue(slotValue.replaceAll("(\\w+)(\\s+)(\\d).*", "$3"));
+            if(mileValue == 0){
+                switch (slotValue){
+                    case "five": miles = 5;
+                        break;
+                    case "ten": miles = 10;
+                        break;
+                    case "fifteen": miles = 15;
+                        break;
+                    case "twenty": miles = 20;
+                        break;
+                    case "twenty five": miles = 25;
+                        break;
+                    case "thirty": miles = 30;
+                        break;
+                    case "thirty five": miles = 35;
+                        break;
+                    case "forty": miles = 40;
+                        break;
+                    case "forty five": miles = 45;
+                        break;
+                    case "fifty": miles = 50;
+                        break;
+                    default: miles = 50;
+                        break;
+                }
+            }else{
+                miles = mileValue;
+            }
+        }
+        return miles;
+    }
+
+    private Integer getMileValue(String slotValue){
+        Integer miles = 0;
+        try {
+            miles = Integer.parseInt(slotValue);
+        }catch (NumberFormatException e){
+            log.error("Unable to parse mileValue {} to int", slotValue);
+            log.error(e.getMessage());
+        }
+        return miles;
     }
 }

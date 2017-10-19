@@ -15,11 +15,19 @@
 package com.deltek.maconomy.dailytime;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URISyntaxException;
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.deltek.maconomy.customerentry.CustomerEntries;
+import com.deltek.maconomy.expense.ExpenseSheets;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -44,25 +52,24 @@ public class WebServiceClient {
 
     private static final Logger log = LoggerFactory.getLogger(WebServiceClient.class);
 
-    private static final String BASE_API_PATH = "https://fti-bld.deltekenterprise.com/containers/v1/bldfti/dailytimeregistration/data;any";
-    /*
-    private static final String SETTINGS_PATH = "/settings/";
-    private static final String FULL_ADDRESS_PATH = "address";
-    private static final String COUNTRY_AND_POSTAL_CODE_PATH = "address/countryAndPostalCode";
-    */
+    private static final String BASE_API_PATH = "https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
+    private static final String BASE_API_PATH_TIME = BASE_API_PATH + "/dailytimeregistration/data;any";
+    private static final String BASE_API_PATH_EXPENSE = BASE_API_PATH + "/expensesheets/data;";
+    private static final String BASE_API_PATH_AR = BASE_API_PATH + "/showcustomerreconciliations/filter?restriction=";
+    private static final String AUTH_HEADER = "Basic c3lzYWRtaW46aCg2UTM2IVM3RjcwKGk=";
 
-    public static String getDailyTime(String employeeNumberVar, String dateVar, Integer hours){
+    public static String insertDailyTime(String employeeNumberVar, String dateVar, Double hours, String jobNumber, String taskName){
         ClientConfig configuration = new ClientConfig();
         configuration.register(DailyTimeRegistration.class);
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
         String queryParams = "?card.employeenumbervar=" + employeeNumberVar + "&card.datevar=" + dateVar;
-        String getUrl = BASE_API_PATH + queryParams;
+        String getUrl = BASE_API_PATH_TIME + queryParams;
 
         MultivaluedMap<String, Object> headers = new MultivaluedHashMap<>();
         ArrayList<Object> auth = new ArrayList<Object>();
-        auth.add("Basic c3lzYWRtaW46aCg2UTM2IVM3RjcwKGk=");
+        auth.add(AUTH_HEADER);
         headers.put("Authorization", auth);
 
         log.info("sending request to url: {}", getUrl);
@@ -77,20 +84,115 @@ public class WebServiceClient {
             concControl.add(concurrencyControl);
             headers.put("Maconomy-Concurrency-Control", concControl);
 
-            String postUrl = BASE_API_PATH + "/table" + queryParams;
+            String postUrl = BASE_API_PATH_TIME + "/table" + queryParams;
             Data data = new Data();
-            data.setJobnumber("1040010");
-            data.setTaskname("TM");
+            data.setJobnumber(jobNumber);
+            data.setTaskname(taskName);
             data.setNumberof(hours);
             Record table = new Record();
             table.setData(data);
             Response response = client.target(postUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).post(Entity.entity(table, MediaType.APPLICATION_JSON));
             return response.getStatusInfo().toString();
-            //Data_ data = record.getData();
-            //return data.getEmployeenamevar();
         }
         return "";
     }
+
+    public static String insertExpense(String expenseSheetNumber, String taskName, Double quantity){
+        ClientConfig configuration = new ClientConfig();
+        configuration.register(ExpenseSheets.class);
+        configuration.register(JacksonJsonProvider.class);
+
+        Client client = ClientBuilder.newClient(configuration);
+        String queryParams = "expensesheetnumber=" + expenseSheetNumber;
+        String getUrl = BASE_API_PATH_EXPENSE + queryParams;
+
+        MultivaluedMap<String, Object> headers = new MultivaluedHashMap<>();
+        ArrayList<Object> auth = new ArrayList<Object>();
+        auth.add(AUTH_HEADER);
+        headers.put("Authorization", auth);
+
+        log.info("sending request to url: {}", getUrl);
+        ExpenseSheets es = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(ExpenseSheets.class);
+        List<com.deltek.maconomy.expense.Record_> records = es.getPanes().getCard().getRecords();
+        String jobNumber = "";
+        if(records.size() >= 1){
+            com.deltek.maconomy.expense.Record_ card = records.get(0);
+            com.deltek.maconomy.expense.Meta____ meta = card.getMeta();
+            String concurrencyControl = meta.getConcurrencyControl();
+            log.info("found concurrency control key: {}", concurrencyControl);
+            ArrayList<Object> concControl = new ArrayList<Object>();
+            concControl.add(concurrencyControl);
+            headers.put("Maconomy-Concurrency-Control", concControl);
+
+            String postUrl = getUrl + "/table";
+            com.deltek.maconomy.expense.Data data = new com.deltek.maconomy.expense.Data();
+            data.setTaskname(taskName);
+            data.setNumberof(quantity);
+            com.deltek.maconomy.expense.Record table = new com.deltek.maconomy.expense.Record();
+            table.setData(data);
+            Response response = client.target(postUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).post(Entity.entity(table, MediaType.APPLICATION_JSON));
+            String status = response.getStatusInfo().toString();
+            if(!status.equalsIgnoreCase("OK")){
+                log.error("insert expense line post request returned status: " + status);
+            }else{
+                jobNumber = card.getData().getJobnumber() + " " + card.getData().getJobname();
+            }
+        }
+        return jobNumber;
+    }
+
+    public static String getCashReceipts(String customerNumber, String toDate, String fromDate){
+        ClientConfig configuration = new ClientConfig();
+        configuration.register(CustomerEntries.class);
+        configuration.register(JacksonJsonProvider.class);
+
+        Client client = ClientBuilder.newClient(configuration);
+        String queryParams = "customernumber='" + customerNumber + "'";
+        String getUrl = BASE_API_PATH_AR + queryParams;
+
+        log.info("sending request to url: {}", getUrl);
+
+        MultivaluedMap<String, Object> headers = new MultivaluedHashMap<>();
+        ArrayList<Object> auth = new ArrayList<Object>();
+        auth.add(AUTH_HEADER);
+        headers.put("Authorization", auth);
+
+        CustomerEntries customerEntries = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(CustomerEntries.class);
+        List<com.deltek.maconomy.customerentry.Record> records = customerEntries.getPanes().getFilter().getRecords();
+        if(records.size() >=1){
+            StringBuilder sb = new StringBuilder();
+            for(com.deltek.maconomy.customerentry.Record r: records){
+                com.deltek.maconomy.customerentry.Data data = r.getData();
+                if(data.getEntrytype().equalsIgnoreCase("credit general journal")){
+                    if(fromDate.isEmpty() && data.getEntrydate().equalsIgnoreCase(toDate)){
+                        sb.append("You have received " + data.getCreditbase().toString() + " dollars from " + data.getName1() + ". ");
+                    }else if(!fromDate.isEmpty()){ // fromDate <= entry date <= toDate
+                        LocalDate entryDate = getLocalDate(data.getEntrydate());
+                        LocalDate dateFrom = getLocalDate(fromDate);
+                        LocalDate dateTo = getLocalDate(toDate);
+                        if(entryDate != null && dateFrom != null && dateTo != null &&
+                            ((entryDate.isEqual(dateFrom) || entryDate.isAfter(dateFrom)) && (dateTo.isEqual(entryDate) || dateTo.isAfter(entryDate)))){
+                            sb.append("You have received " + data.getCreditbase().toString() + " dollars from " + data.getName1() + ". ");
+                        }
+                    }
+                }
+            }
+            return sb.toString();
+        }else{
+            return "";
+        }
+    }
+
+    private static LocalDate getLocalDate(String date){
+        LocalDate localDate = null;
+        try{
+            localDate = LocalDate.parse(date, DateTimeFormatter.ISO_LOCAL_DATE);
+        }catch(DateTimeParseException e){
+            log.error("Unable to parse date {} to local date", date);
+        }
+        return localDate;
+    }
+
     /**
      * This method will make a request to the Device Address API path for retrieving the full address.
      * @return JsonNode the JSON response from the API.

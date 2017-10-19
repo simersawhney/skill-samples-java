@@ -4,12 +4,30 @@
       "intent": "DailyTimeIntent",
       "slots": [
         {
-          "name": "day",
+          "name": "dateValue",
           "type": "AMAZON.DATE"
         },
         {
-          "name": "hour",
-          "type": "AMAZON.NUMBER"
+          "name": "hourValue",
+          "type": "AMAZON.DURATION"
+        }
+      ]
+    },
+    {
+      "intent": "ExpenseIntent",
+      "slots": [
+        {
+          "name": "mileValue",
+          "type": "LIST_OF_MILES"
+        }
+      ]
+    },
+    {
+      "intent": "CashReceiptsIntent",
+      "slots": [
+        {
+          "name": "dateValue",
+          "type": "AMAZON.DATE"
         }
       ]
     },

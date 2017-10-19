@@ -129,7 +129,7 @@ public class Data {
     @JsonProperty("taskname")
     private String taskname;
     @JsonProperty("numberof")
-    private Integer numberof;
+    private Double numberof;
     @JsonProperty("entrytext")
     private String entrytext;
     @JsonProperty("activitytype")
@@ -426,7 +426,7 @@ public class Data {
      * @param weeklineapprovalstatusvar
      * @param taskdescriptionvar
      */
-    public Data(String employeenumber, Integer linenumber, String thedate, String jobnumber, String activitynumber, String taskname, Integer numberof, String entrytext, String activitytype, Integer numbertransferred, String remark, String description, Boolean internaljob, String locationname, String entityname, String projectname, String purposename, String localspec1name, String localspec2name, String localspec3name, String specification1name, String specification2name, String specification3name, String companynumber, Boolean transferredforposting, String costtype, Boolean approvedbysuperior, Boolean releasedbysuperior, Integer uniquelinenumber, Boolean permanentline, Integer plannedfortheperiod, Integer estimatedtimetocompletion, Boolean executed, String instancekey, String overtimetype, Boolean submitted, String favorite, String registrationnote, Integer estimatedtimetocompletionmandays, String dailydescription, String transactiontimestamp, Integer numberproposed, String transactiontype, Boolean invoiceable, Integer billingpricecurrency, Integer billingpricebase, Integer billingpriceenterprise, String employeecategorynumber, String absencetype, String timeregistrationunit, String optionlistnumber1, String selectedoption1, String optionlistnumber2, String selectedoption2, String optionlistnumber3, String selectedoption3, String optionlistnumber4, String selectedoption4, String optionlistnumber5, String selectedoption5, String jobnamevar, String customernumbervar, String customernamevar, String taskdescriptionvar, String taskpathvar, String activitytextvar, String weeklineapprovalstatusvar, String weeklineapprovedorrejectedbyvar, String weeklineapprovaldatevar, String weeklinecommentprojectmanagervar, String tooltipjobvar, String tooltiptaskvar, String tooltiptasklinebreakvar, String tooltipactivityvar, String tooltipconclusionvar, String linedetailsvar, String linedetailstypevar, Boolean usesdailydescriptionsvar, Integer billingpricetotalcurrencyvar, Integer billingpricetotalbasevar, Integer billingpricetotalenterprisevar, Integer expenseamountbasetotalvar, Integer mileageamountbasetotalvar, Integer mileagenumberoftotalvar, String customerlevelnamevar, String level1customernumbervar, String level2customernumbervar, String level3customernumbervar, String level4customernumbervar, String level5customernumbervar, String level1customernamevar, String level2customernamevar, String level3customernamevar, String level4customernamevar, String level5customernamevar, String weektextheaderinstancekeyvar, String daytextheaderinstancekeyvar, Boolean weektextheaderhastextvar, Boolean daytextheaderhastextvar) {
+    public Data(String employeenumber, Integer linenumber, String thedate, String jobnumber, String activitynumber, String taskname, Double numberof, String entrytext, String activitytype, Integer numbertransferred, String remark, String description, Boolean internaljob, String locationname, String entityname, String projectname, String purposename, String localspec1name, String localspec2name, String localspec3name, String specification1name, String specification2name, String specification3name, String companynumber, Boolean transferredforposting, String costtype, Boolean approvedbysuperior, Boolean releasedbysuperior, Integer uniquelinenumber, Boolean permanentline, Integer plannedfortheperiod, Integer estimatedtimetocompletion, Boolean executed, String instancekey, String overtimetype, Boolean submitted, String favorite, String registrationnote, Integer estimatedtimetocompletionmandays, String dailydescription, String transactiontimestamp, Integer numberproposed, String transactiontype, Boolean invoiceable, Integer billingpricecurrency, Integer billingpricebase, Integer billingpriceenterprise, String employeecategorynumber, String absencetype, String timeregistrationunit, String optionlistnumber1, String selectedoption1, String optionlistnumber2, String selectedoption2, String optionlistnumber3, String selectedoption3, String optionlistnumber4, String selectedoption4, String optionlistnumber5, String selectedoption5, String jobnamevar, String customernumbervar, String customernamevar, String taskdescriptionvar, String taskpathvar, String activitytextvar, String weeklineapprovalstatusvar, String weeklineapprovedorrejectedbyvar, String weeklineapprovaldatevar, String weeklinecommentprojectmanagervar, String tooltipjobvar, String tooltiptaskvar, String tooltiptasklinebreakvar, String tooltipactivityvar, String tooltipconclusionvar, String linedetailsvar, String linedetailstypevar, Boolean usesdailydescriptionsvar, Integer billingpricetotalcurrencyvar, Integer billingpricetotalbasevar, Integer billingpricetotalenterprisevar, Integer expenseamountbasetotalvar, Integer mileageamountbasetotalvar, Integer mileagenumberoftotalvar, String customerlevelnamevar, String level1customernumbervar, String level2customernumbervar, String level3customernumbervar, String level4customernumbervar, String level5customernumbervar, String level1customernamevar, String level2customernamevar, String level3customernamevar, String level4customernamevar, String level5customernamevar, String weektextheaderinstancekeyvar, String daytextheaderinstancekeyvar, Boolean weektextheaderhastextvar, Boolean daytextheaderhastextvar) {
         super();
         this.employeenumber = employeenumber;
         this.linenumber = linenumber;
@@ -590,12 +590,12 @@ public class Data {
     }
 
     @JsonProperty("numberof")
-    public Integer getNumberof() {
+    public Double getNumberof() {
         return numberof;
     }
 
     @JsonProperty("numberof")
-    public void setNumberof(Integer numberof) {
+    public void setNumberof(Double numberof) {
         this.numberof = numberof;
     }
 

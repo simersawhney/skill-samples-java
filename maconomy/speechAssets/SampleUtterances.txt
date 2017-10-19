@@ -1,9 +1,15 @@
-DailyTimeIntent say hello
-DailyTimeIntent say hello world
-DailyTimeIntent hello
-DailyTimeIntent say hi
-DailyTimeIntent say hi world
-DailyTimeIntent hi
-DailyTimeIntent how are you
-DailyTimeIntent get time for {day}
-DailyTimeIntent to register {hour} hours for {day}
+DailyTimeIntent to record {hourValue} to my time sheet for the Vandalay industries audit job
+DailyTimeIntent to record {hourValue} to my time sheet on {dateValue} for the Vandalay industries audit job
+DailyTimeIntent to record {hourValue} to my time sheet on {dateValue}
+DailyTimeIntent to record {hourValue} to my time sheet
+DailyTimeIntent to record {hourValue} on {dateValue}
+DailyTimeIntent to record {hourValue}
+DailyTimeIntent to register {hourValue} on the job I used in the morning
+DailyTimeIntent to register {hourValue} for {dateValue}
+
+ExpenseIntent to record {mileValue} miles to my expense sheet for the Vandalay Industries job
+ExpenseIntent to record {mileValue} miles to my expense sheet
+ExpenseIntent to record {mileValue} miles
+
+CashReceiptsIntent to tell me the cash receipts for {dateValue}
+CashReceiptsIntent to tell me the cash receipts
