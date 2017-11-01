@@ -1,0 +1,10 @@
+../.idea/
+../address/.gradle/
+../address/build/
+../helloworld/.gradle/
+../helloworld/build/
+.gradle/
+.idea/
+build/
+out/
+../skill-samples-java.iml
