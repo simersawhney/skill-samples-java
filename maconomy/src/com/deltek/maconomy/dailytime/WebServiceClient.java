@@ -18,7 +18,10 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.chrono.ChronoLocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -52,11 +55,11 @@ public class WebServiceClient {
 
     private static final Logger log = LoggerFactory.getLogger(WebServiceClient.class);
 
-    private static final String BASE_API_PATH = "https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
+    private static final String BASE_API_PATH = "http://54.174.46.107:9150/containers/v1/cpademo";//"https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
     private static final String BASE_API_PATH_TIME = BASE_API_PATH + "/dailytimeregistration/data;any";
     private static final String BASE_API_PATH_EXPENSE = BASE_API_PATH + "/expensesheets/data;";
     private static final String BASE_API_PATH_AR = BASE_API_PATH + "/showcustomerreconciliations/filter?restriction=";
-    private static final String AUTH_HEADER = "Basic c3lzYWRtaW46aCg2UTM2IVM3RjcwKGk=";
+    private static final String AUTH_HEADER = "Basic QWRtaW5pc3RyYXRvcjoxMjM0NTY=";//"Basic c3lzYWRtaW46aCg2UTM2IVM3RjcwKGk=";
 
     public static String insertDailyTime(String employeeNumberVar, String dateVar, Double hours, String jobNumber, String taskName){
         ClientConfig configuration = new ClientConfig();
@@ -163,22 +166,68 @@ public class WebServiceClient {
             StringBuilder sb = new StringBuilder();
             for(com.deltek.maconomy.customerentry.Record r: records){
                 com.deltek.maconomy.customerentry.Data data = r.getData();
-                if(data.getEntrytype().equalsIgnoreCase("credit general journal")){
+                if(data.getEntrytype().equalsIgnoreCase("credit_general_journal")){
                     if(fromDate.isEmpty() && data.getEntrydate().equalsIgnoreCase(toDate)){
-                        sb.append("You have received " + data.getCreditbase().toString() + " dollars from " + data.getName1() + ". ");
+                        Integer creditBase = data.getCreditbase()/100;
+                        sb.append("You have received " + creditBase.toString() + " dollars from " + data.getName1() + ". ");
                     }else if(!fromDate.isEmpty()){ // fromDate <= entry date <= toDate
                         LocalDate entryDate = getLocalDate(data.getEntrydate());
                         LocalDate dateFrom = getLocalDate(fromDate);
                         LocalDate dateTo = getLocalDate(toDate);
                         if(entryDate != null && dateFrom != null && dateTo != null &&
                             ((entryDate.isEqual(dateFrom) || entryDate.isAfter(dateFrom)) && (dateTo.isEqual(entryDate) || dateTo.isAfter(entryDate)))){
-                            sb.append("You have received " + data.getCreditbase().toString() + " dollars from " + data.getName1() + ". ");
+                            Integer creditBase = data.getCreditbase()/100;
+                            sb.append("You have received " + creditBase.toString() + " dollars from " + data.getName1() + ". ");
                         }
                     }
                 }
             }
             return sb.toString();
         }else{
+            return "";
+        }
+    }
+
+    public static String getInvoicesDue(){
+        ClientConfig configuration = new ClientConfig();
+        configuration.register(CustomerEntries.class);
+        configuration.register(JacksonJsonProvider.class);
+
+        Client client = ClientBuilder.newClient(configuration);
+        String queryParams = "duedate" + encodeValue("<date(2017,7,25)") + encodeValue(" and ") +"duedate" + encodeValue(">date(2017,1,1)") + encodeValue(" and ") + "entrytype=" + encodeValue("CustomerEntryTypeType'Invoice");
+        String getUrl = BASE_API_PATH_AR + queryParams;
+
+        log.info("sending request to url: {}", getUrl);
+
+        MultivaluedMap<String, Object> headers = new MultivaluedHashMap<>();
+        ArrayList<Object> auth = new ArrayList<Object>();
+        auth.add(AUTH_HEADER);
+        headers.put("Authorization", auth);
+
+        CustomerEntries customerEntries = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(CustomerEntries.class);
+        List<com.deltek.maconomy.customerentry.Record> records = customerEntries.getPanes().getFilter().getRecords();
+
+        if(records.size() >=1){
+            Integer invoicesSize = records.size();
+            StringBuilder sb = new StringBuilder();
+            sb.append("I found " + invoicesSize.toString() + " invoices due for more than 90 days for this year. ");
+            for(com.deltek.maconomy.customerentry.Record r: records){
+                com.deltek.maconomy.customerentry.Data data = r.getData();
+                Integer debitBase = data.getDebitbase()/100;
+                String name1 = data.getName1();
+                sb.append(name1 + " owes you " + debitBase + " dollars. ");
+            }
+            return sb.toString();
+        }else{
+            return "";
+        }
+    }
+
+    private static String encodeValue(String value) {
+        try {
+            return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
+        }catch (UnsupportedEncodingException e){
+            log.error("Unable to encode {} to UTF8", value);
             return "";
         }
     }

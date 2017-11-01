@@ -13,3 +13,6 @@ ExpenseIntent to record {mileValue} miles
 
 CashReceiptsIntent to tell me the cash receipts for {dateValue}
 CashReceiptsIntent to tell me the cash receipts
+
+InvoicesDueIntent to tell me the invoices due for more than ninety days
+InvoicesDueIntent to tell me the invoices due

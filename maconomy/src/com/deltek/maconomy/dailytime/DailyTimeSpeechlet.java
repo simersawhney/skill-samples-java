@@ -81,6 +81,8 @@ public class DailyTimeSpeechlet implements Speechlet {
             return insertExpense(intent);
         } else if ("CashReceiptsIntent".equals(intentName)) {
             return getCashReceipts(intent);
+        } else if ("InvoicesDueIntent".equals(intentName)) {
+            return getInvoicesDue(intent);
         } else if ("AMAZON.HelpIntent".equals(intentName)) {
             return getHelpResponse();
         } else {
@@ -131,9 +133,10 @@ public class DailyTimeSpeechlet implements Speechlet {
         String dateVar = getDate(intent);
         log.info("received date {}", dateVar);
 
-        String jobNumber = "1040010";
-        String taskName = "TM";
-        String status = WebServiceClient.insertDailyTime("23035", dateVar, hours, jobNumber, taskName);
+        String jobNumber = "10001";//"1040010";
+        String taskName = "100";//"TM";
+        String employeeNumber = "100-900";//"23035";
+        String status = WebServiceClient.insertDailyTime(employeeNumber, dateVar, hours, jobNumber, taskName);
         log.info("insertDailyTime request status={}", status);
         StringBuilder sb = new StringBuilder();
         if(status.equalsIgnoreCase("OK")){
@@ -164,8 +167,8 @@ public class DailyTimeSpeechlet implements Speechlet {
         Integer miles = getMiles(intent);
         log.info("received {} miles", miles);
 
-        String expenseSheetNumber = "1700000";
-        String taskName = "Travel Expenses";
+        String expenseSheetNumber = "10700062";//"1700000";
+        String taskName = "400";//"Travel Expenses";
         String jobNumber = WebServiceClient.insertExpense(expenseSheetNumber, taskName, miles.doubleValue());
         log.info("insertExpense request jobNumber={}", jobNumber);
         StringBuilder sb = new StringBuilder();
@@ -200,7 +203,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         String fromDate = getFromDate(intent);
         log.info("received fromDate {}", fromDate);
 
-        String customerNumber = "110060";
+        String customerNumber = "10056";//"110060";
         String result = WebServiceClient.getCashReceipts(customerNumber, toDate, fromDate);
         log.info("getCashReceipts result ={}", result);
 
@@ -209,6 +212,29 @@ public class DailyTimeSpeechlet implements Speechlet {
         // Create the Simple card content.
         SimpleCard card = new SimpleCard();
         card.setTitle("CashReceipts");
+        card.setContent(speechText);
+
+        // Create the plain text output.
+        PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
+        speech.setText(speechText);
+
+        return SpeechletResponse.newTellResponse(speech, card);
+    }
+
+    /**
+     * Creates a {@code SpeechletResponse} for the CashReceipts intent.
+     *
+     * @return SpeechletResponse spoken and visual response for the given intent
+     */
+    private SpeechletResponse getInvoicesDue(Intent intent) {
+        String result = WebServiceClient.getInvoicesDue();
+        log.info("getInvoicesDue result ={}", result);
+
+        String speechText = result.isEmpty()?"Sorry, I was unable to find any invoices due for more than 90 days": result;
+
+        // Create the Simple card content.
+        SimpleCard card = new SimpleCard();
+        card.setTitle("InvoicesDue");
         card.setContent(speechText);
 
         // Create the plain text output.
