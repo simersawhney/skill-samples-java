@@ -133,9 +133,9 @@ public class DailyTimeSpeechlet implements Speechlet {
         String dateVar = getDate(intent);
         log.info("received date {}", dateVar);
 
-        String jobNumber = "10001";//"1040010";
-        String taskName = "100";//"TM";
-        String employeeNumber = "100-900";//"23035";
+        String jobNumber = "1020102";//"1040010";
+        String taskName = "104";//"TM";
+        String employeeNumber = "100-111";//"23035";
         String status = WebServiceClient.insertDailyTime(employeeNumber, dateVar, hours, jobNumber, taskName);
         log.info("insertDailyTime request status={}", status);
         StringBuilder sb = new StringBuilder();
@@ -167,7 +167,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         Integer miles = getMiles(intent);
         log.info("received {} miles", miles);
 
-        String expenseSheetNumber = "10700062";//"1700000";
+        String expenseSheetNumber = "850081";//"1700000";
         String taskName = "400";//"Travel Expenses";
         String jobNumber = WebServiceClient.insertExpense(expenseSheetNumber, taskName, miles.doubleValue());
         log.info("insertExpense request jobNumber={}", jobNumber);

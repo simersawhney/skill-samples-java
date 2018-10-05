@@ -55,7 +55,7 @@ public class WebServiceClient {
 
     private static final Logger log = LoggerFactory.getLogger(WebServiceClient.class);
 
-    private static final String BASE_API_PATH = "http://54.174.46.107:9150/containers/v1/cpademo";//"https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
+    private static final String BASE_API_PATH = "http://deltekmaconomy.com:4111/containers/v1/cpademo";//"https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
     private static final String BASE_API_PATH_TIME = BASE_API_PATH + "/dailytimeregistration/data;any";
     private static final String BASE_API_PATH_EXPENSE = BASE_API_PATH + "/expensesheets/data;";
     private static final String BASE_API_PATH_AR = BASE_API_PATH + "/showcustomerreconciliations/filter?restriction=";
@@ -194,7 +194,7 @@ public class WebServiceClient {
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
-        String queryParams = "duedate" + encodeValue("<date(2017,7,25)") + encodeValue(" and ") +"duedate" + encodeValue(">date(2017,1,1)") + encodeValue(" and ") + "entrytype=" + encodeValue("CustomerEntryTypeType'Invoice");
+        String queryParams = "duedate" + encodeValue("<date(2018,10,16)") + encodeValue(" and ") +"duedate" + encodeValue(">date(2018,7,1)") + encodeValue(" and ") + "entrytype=" + encodeValue("CustomerEntryTypeType'Invoice");
         String getUrl = BASE_API_PATH_AR + queryParams;
 
         log.info("sending request to url: {}", getUrl);
