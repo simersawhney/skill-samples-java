@@ -55,11 +55,11 @@ public class WebServiceClient {
 
     private static final Logger log = LoggerFactory.getLogger(WebServiceClient.class);
 
-    private static final String BASE_API_PATH = "http://deltekmaconomy.com:4111/containers/v1/cpademo";//"https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
+    private static final String BASE_API_PATH = "https://ash50mac.us.deltek.com/containers/v1/d50c";//"https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
     private static final String BASE_API_PATH_TIME = BASE_API_PATH + "/dailytimeregistration/data;any";
     private static final String BASE_API_PATH_EXPENSE = BASE_API_PATH + "/expensesheets/data;";
     private static final String BASE_API_PATH_AR = BASE_API_PATH + "/showcustomerreconciliations/filter?restriction=";
-    private static final String AUTH_HEADER = "Basic QWRtaW5pc3RyYXRvcjoxMjM0NTY=";//"Basic c3lzYWRtaW46aCg2UTM2IVM3RjcwKGk=";
+    private static final String AUTH_HEADER = "Basic QWRtaW5pc3RyYXRvcjpEZWx0ZWsxMjMh";//"Basic c3lzYWRtaW46aCg2UTM2IVM3RjcwKGk=";
 
     public static String insertDailyTime(String employeeNumberVar, String dateVar, Double hours, String jobNumber, String taskName){
         ClientConfig configuration = new ClientConfig();
@@ -100,7 +100,7 @@ public class WebServiceClient {
         return "";
     }
 
-    public static String insertExpense(String expenseSheetNumber, String taskName, Double quantity){
+    public static String insertExpense(String expenseSheetNumber, String jobNumber, String taskName, Double quantity){
         ClientConfig configuration = new ClientConfig();
         configuration.register(ExpenseSheets.class);
         configuration.register(JacksonJsonProvider.class);
@@ -117,7 +117,7 @@ public class WebServiceClient {
         log.info("sending request to url: {}", getUrl);
         ExpenseSheets es = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(ExpenseSheets.class);
         List<com.deltek.maconomy.expense.Record_> records = es.getPanes().getCard().getRecords();
-        String jobNumber = "";
+        String jobNum = "";
         if(records.size() >= 1){
             com.deltek.maconomy.expense.Record_ card = records.get(0);
             com.deltek.maconomy.expense.Meta____ meta = card.getMeta();
@@ -129,6 +129,7 @@ public class WebServiceClient {
 
             String postUrl = getUrl + "/table";
             com.deltek.maconomy.expense.Data data = new com.deltek.maconomy.expense.Data();
+            data.setJobnumber(jobNumber);
             data.setTaskname(taskName);
             data.setNumberof(quantity);
             com.deltek.maconomy.expense.Record table = new com.deltek.maconomy.expense.Record();
@@ -138,10 +139,10 @@ public class WebServiceClient {
             if(!status.equalsIgnoreCase("OK")){
                 log.error("insert expense line post request returned status: " + status);
             }else{
-                jobNumber = card.getData().getJobnumber() + " " + card.getData().getJobname();
+                jobNum = card.getData().getJobnumber() + " " + card.getData().getJobname();
             }
         }
-        return jobNumber;
+        return jobNum;
     }
 
     public static String getCashReceipts(String customerNumber, String toDate, String fromDate){
@@ -194,7 +195,7 @@ public class WebServiceClient {
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
-        String queryParams = "duedate" + encodeValue("<date(2018,10,16)") + encodeValue(" and ") +"duedate" + encodeValue(">date(2018,7,1)") + encodeValue(" and ") + "entrytype=" + encodeValue("CustomerEntryTypeType'Invoice");
+        String queryParams = "duedate" + encodeValue("<date(2019,12,1)") + encodeValue(" and ") +"duedate" + encodeValue(">date(2019,9,1)") + encodeValue(" and ") + "entrytype=" + encodeValue("CustomerEntryTypeType'Invoice");
         String getUrl = BASE_API_PATH_AR + queryParams;
 
         log.info("sending request to url: {}", getUrl);
