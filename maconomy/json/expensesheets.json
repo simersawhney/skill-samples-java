@@ -1,0 +1,2127 @@
+{
+    "meta": {
+        "containerName": "expensesheets"
+    },
+    "panes": {
+        "card": {
+            "meta": {
+                "paneName": "card",
+                "concurrencyControl": "",
+                "rowCount": 1,
+                "rowOffset": 0
+            },
+            "records": [
+                {
+                    "meta": {
+                        "rowNumber": 0,
+                        "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\""
+                    },
+                    "data": {
+                        "expensesheetnumber": "10700000",
+                        "description": "Expenses  - May",
+                        "employeenumber": "1001",
+                        "companynumber": "100",
+                        "createdby": "Administrator",
+                        "createddate": "2014-05-19",
+                        "submitted": true,
+                        "submittedby": "Administrator",
+                        "datesubmitted": "2014-05-19",
+                        "transferred": true,
+                        "transferredby": "Administrator",
+                        "transferdate": "2014-05-19",
+                        "approved": true,
+                        "approvedby": "Administrator",
+                        "approvaldate": "2014-05-19",
+                        "fromdate": "",
+                        "todate": "",
+                        "remark1": "",
+                        "remark2": "",
+                        "remark3": "",
+                        "superioremployee": "10-1100",
+                        "secretaryemployee": "1003",
+                        "reopened": false,
+                        "lineapprovalmissing": false,
+                        "fullyapproved": true,
+                        "copyfromexpensesheetnumber": "",
+                        "jobnumber": "",
+                        "jobname": "",
+                        "amountbase": 235500,
+                        "amountenterprise": 235500,
+                        "numberof": 5,
+                        "quantitya": 0,
+                        "quantityb": 0,
+                        "approvalnumber": 0,
+                        "currency": "nil",
+                        "exchangerate": 0,
+                        "documentarchivenumber": "",
+                        "employeename": "Sean Williams",
+                        "instancekey": "ExpenseSheetHeaderE6354AAD-5E8E-4A2B-B54B-B9BCD69B4D28",
+                        "notenumber": "",
+                        "tutoremployee": "",
+                        "transactiontimestamp": "2016-04-28 03:23:21.200",
+                        "expensesheettype": "normal",
+                        "copyallfields": false,
+                        "defaulttransactiontype": "Expense",
+                        "expensesheettext1": "",
+                        "expensesheettext2": "",
+                        "expensesheettext3": "",
+                        "expensesheettext4": "",
+                        "expensesheettext5": "",
+                        "expensesheetboolean1": false,
+                        "expensesheetboolean2": false,
+                        "expensesheetboolean3": false,
+                        "expensesheetboolean4": false,
+                        "expensesheetboolean5": false,
+                        "expensesheetdate1": "",
+                        "expensesheetdate2": "",
+                        "expensesheetdate3": "",
+                        "expensesheetdate4": "",
+                        "expensesheetdate5": "",
+                        "expensesheetpopup1": "nil",
+                        "expensesheetpopup2": "nil",
+                        "expensesheetpopup3": "nil",
+                        "expensesheetpopup4": "nil",
+                        "expensesheetpopup5": "nil",
+                        "approvalgroupinstancekey": "ApprovalGroup3943CCE9-97E1-4AD6-B957-F161042F3D46",
+                        "approveraccessinstancekey": "",
+                        "approvalremarkvar": "",
+                        "companyname1var": "RSM US LLP",
+                        "basecurrencyvar": "usd",
+                        "totalvatbasevar": 0,
+                        "superioremployeenamevar": "James Philips",
+                        "secretaryemployeenamevar": "Annie Leonard",
+                        "tutoremployeenamevar": "",
+                        "employeesubcontractornumbervar": "",
+                        "documentarchivedescriptionvar": "",
+                        "isproxycurrentemployeevar": true,
+                        "registrationnumbervar": "",
+                        "accountnumbervar": "",
+                        "vendornumbervar": "E-1001",
+                        "amounttotaltovendorbasevar": 235500,
+                        "vendorname1var": "Sean Williams",
+                        "bankvar": "",
+                        "notedescriptionvar": "",
+                        "headerapprovalrelationvar": "expense_sheet",
+                        "headerapprovalnumbervar": 1,
+                        "headerapprovallinenumbervar": 0,
+                        "headercurrentapprovalstatusvar": "approved",
+                        "headercurrentapprovalstatusdescriptionvar": "Approved by Administrator",
+                        "headercanbeapprovedbycurrentuservar": false,
+                        "headerapprovedorrejectedbyvar": "Administrator",
+                        "headerapprovaldatevar": "2014-05-19",
+                        "headerapprovaltimevar": "23:08:22",
+                        "headerremarkvar": "",
+                        "workflowstatusvar": "closed",
+                        "duplicatedexpensesheetnumbervar": "",
+                        "level1titlenovar": "Family/Parent No.",
+                        "level2titlenovar": "Child No.",
+                        "level3titlenovar": "Level 3 No.",
+                        "level4titlenovar": "Level 4 No.",
+                        "level5titlenovar": "Level 5 No.",
+                        "level1titlenamevar": "Family/Parent Name",
+                        "level2titlenamevar": "Child Name",
+                        "level3titlenamevar": "Level 3 Name",
+                        "level4titlenamevar": "Level 4 Name",
+                        "level5titlenamevar": "Level 5 Name",
+                        "headercustomernumbervar": "",
+                        "headercustomernamevar": "",
+                        "projectmanagernumbervar": "",
+                        "projectmanagernamevar": "",
+                        "vendorsettlementstatusvar": "not_paid",
+                        "documentarchivelinecountvar": 0,
+                        "expensesheetheaderstatusvar": "approved",
+                        "removeddocumentnamevar": "",
+                        "receiptnamevar": "",
+                        "expenseattachmenttypevar": "nil",
+                        "attachtolineinstancekeyvar": "",
+                        "allowincompleteexpensesheetlinevar": true,
+                        "defaultdescriptionvar": "",
+                        "employeepositionvar": "Partner",
+                        "employeeelectronicmailaddressvar": "cpacompanyone@Deltek.com",
+                        "employeetelephonevar": "(651)407-5818",
+                        "employeemobilephonevar": "",
+                        "employeecompanynumbervar": "100",
+                        "employeecompanynamevar": "RSM US LLP",
+                        "canseeallexpensesheetsvar": true,
+                        "usersemployeenumbervar": "150-109",
+                        "lastjobnumbervar": "",
+                        "lastactivitynumbervar": "",
+                        "lasttasknamevar": "",
+                        "removed3var": 0,
+                        "removed2var": 0,
+                        "removed1var": 0,
+                        "lastentrydatevar": "2012-05-15",
+                        "lastcurrencyvar": "usd",
+                        "numberoflinesvar": 5
+                    },
+                    "links": {
+                        "data:key:headerapproval_approvalheader": {
+                            "rel": "data:key:headerapproval_approvalheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetHeaderE6354AAD-5E8E-4A2B-B54B-B9BCD69B4D28;approvalrelation=expense_sheet;approvalnumber=1"
+                        },
+                        "data:key:documentarchivenumber_documentarchiveheader": {
+                            "rel": "data:key:documentarchivenumber_documentarchiveheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;documentarchivenumber"
+                        },
+                        "data:key:approvalgroupinstancekey_approvalgroup": {
+                            "rel": "data:key:approvalgroupinstancekey_approvalgroup",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey=ApprovalGroup3943CCE9-97E1-4AD6-B957-F161042F3D46"
+                        },
+                        "data:key:notenumber_noteheader": {
+                            "rel": "data:key:notenumber_noteheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;notenumber"
+                        },
+                        "data:key:instancekey_expensesheetline": {
+                            "rel": "data:key:instancekey_expensesheetline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:approveraccessinstancekey_approveraccessheader": {
+                            "rel": "data:key:approveraccessinstancekey_approveraccessheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approveraccessinstancekey"
+                        },
+                        "data:key:secretaryemployee_employee": {
+                            "rel": "data:key:secretaryemployee_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1003"
+                        },
+                        "data:key:companynumber_companyinformation": {
+                            "rel": "data:key:companynumber_companyinformation",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+                        },
+                        "data:key:superioremployee_employee": {
+                            "rel": "data:key:superioremployee_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=10-1100"
+                        },
+                        "data:key:expensesheetemployeenumber_employee": {
+                            "rel": "data:key:expensesheetemployeenumber_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1001"
+                        },
+                        "data:key:jobnumber_jobheader": {
+                            "rel": "data:key:jobnumber_jobheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber"
+                        },
+                        "data:key:headerapproval_approvalline": {
+                            "rel": "data:key:headerapproval_approvalline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetHeaderE6354AAD-5E8E-4A2B-B54B-B9BCD69B4D28;approvalrelation=expense_sheet;linenumber=0;approvalnumber=1"
+                        },
+                        "data:key:copyfromexpensesheetnumber_expensesheetheader": {
+                            "rel": "data:key:copyfromexpensesheetnumber_expensesheetheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;expensesheetnumber"
+                        },
+                        "data:key:tutoremployee_employee": {
+                            "rel": "data:key:tutoremployee_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber"
+                        },
+                        "action:insert": {
+                            "rel": "action:insert",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/init?row=0"
+                        },
+                        "action:create": {
+                            "rel": "action:create",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card?row=0"
+                        },
+                        "action:print": {
+                            "rel": "action:print",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/print"
+                        },
+                        "action:reopenexpensesheet": {
+                            "rel": "action:reopenexpensesheet",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/action;name=reopenexpensesheet"
+                        },
+                        "action:duplicateexpensesheet": {
+                            "rel": "action:duplicateexpensesheet",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/action;name=duplicateexpensesheet"
+                        },
+                        "action:actionsequence": {
+                            "rel": "action:actionsequence",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/action;name=actionsequence"
+                        },
+                        "action:runreport": {
+                            "rel": "action:runreport",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/action;name=runreport"
+                        },
+                        "action:emailonaction": {
+                            "rel": "action:emailonaction",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/action;name=emailonaction"
+                        },
+                        "action:exportdataset": {
+                            "rel": "action:exportdataset",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/0/action;name=exportdataset"
+                        }
+                    }
+                }
+            ],
+            "links": {
+                "action:insert": {
+                    "rel": "action:insert",
+                    "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card/init"
+                },
+                "action:create": {
+                    "rel": "action:create",
+                    "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/card"
+                }
+            }
+        },
+        "table": {
+            "meta": {
+                "paneName": "table",
+                "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\"",
+                "rowCount": 5,
+                "rowOffset": 0
+            },
+            "records": [
+                {
+                    "meta": {
+                        "rowNumber": 0,
+                        "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\", \"table\"=\"b4020f2d57f264991f8e40c1014858a72d933779\""
+                    },
+                    "data": {
+                        "expensesheetnumber": "10700000",
+                        "linenumber": 1,
+                        "entrydate": "2012-05-15",
+                        "jobnumber": "10000",
+                        "activitynumber": "400",
+                        "text": "Airfare",
+                        "currency": "usd",
+                        "amountbase": 75000,
+                        "amountcurrency": 75000,
+                        "financevatcode": "",
+                        "reference": "",
+                        "taskname": "401",
+                        "companynumber": "100",
+                        "locationname": "1000",
+                        "entityname": "1000",
+                        "projectname": "10",
+                        "purposename": "1001",
+                        "specification1name": "10",
+                        "specification2name": "-",
+                        "specification3name": "-",
+                        "localspec1name": "-",
+                        "localspec2name": "-",
+                        "localspec3name": "-",
+                        "startingdate": "",
+                        "startingtime": "",
+                        "endingdate": "",
+                        "closingtime": "",
+                        "remark1": "",
+                        "remark2": "",
+                        "remark3": "",
+                        "quantitya": 0,
+                        "quantityb": 0,
+                        "unitpricebase": 75000,
+                        "unitpricecurrency": 75000,
+                        "numberof": 1,
+                        "costtype": "outlays",
+                        "submitted": true,
+                        "newapprovalstatus": "nil",
+                        "approvalstatus": "nil",
+                        "approvedorrejectedby": "",
+                        "approvaldate": "",
+                        "commentprojectmanager": "",
+                        "approvedbysuperior": true,
+                        "transferredforposting": true,
+                        "transferredamountbase": 75000,
+                        "transferredquantitya": 0,
+                        "transferredquantityb": 0,
+                        "transferredamountcurrency": 75000,
+                        "employeenumber": "1001",
+                        "releasedbysuperior": false,
+                        "amountenterprise": 75000,
+                        "unitpriceenterprise": 75000,
+                        "transferredamountenterprise": 75000,
+                        "exchangerate": 1,
+                        "vatcurrency": 0,
+                        "vatbase": 0,
+                        "vatenterprise": 0,
+                        "transferredvatcurrency": 0,
+                        "transferredvatbase": 0,
+                        "transferredvatenterprise": 0,
+                        "unitpriceexvatbase": 75000,
+                        "unitpriceexvatcurrency": 75000,
+                        "unitpriceexvatenterprise": 75000,
+                        "documentname": "",
+                        "instancekey": "ExpenseSheetLineF09A3AB6-0EF7-4DD5-B795-001398DE1828",
+                        "transactiontimestamp": "2020-01-09 14:32:08.560",
+                        "favorite": "",
+                        "transferredvatspecificationentry": "",
+                        "financevatcode2": "",
+                        "financevatcode3": "",
+                        "vat1currency": 0,
+                        "vat1base": 0,
+                        "vat1enterprise": 0,
+                        "vat2currency": 0,
+                        "vat2base": 0,
+                        "vat2enterprise": 0,
+                        "vat3currency": 0,
+                        "vat3base": 0,
+                        "vat3enterprise": 0,
+                        "numberproposed": 1,
+                        "numberproposedtransferred": 1,
+                        "billingpricetotalproposedcurrency": 75000,
+                        "billingpriceproposedcurrency": 75000,
+                        "billingpricecurrency": 75000,
+                        "useinvoiceproposal": false,
+                        "mileagefrom": "",
+                        "mileageto": "",
+                        "mileagevia": "",
+                        "mileagevehicle": "nil",
+                        "transactiontype": "Expense",
+                        "expensesheetlinetext1": "",
+                        "expensesheetlinetext2": "",
+                        "expensesheetlinetext3": "",
+                        "expensesheetlinetext4": "",
+                        "expensesheetlinetext5": "",
+                        "expensesheetlinetext6": "",
+                        "expensesheetlinetext7": "",
+                        "expensesheetlinetext8": "",
+                        "expensesheetlinetext9": "",
+                        "expensesheetlinetext10": "",
+                        "expensesheetlineinteger1": 0,
+                        "expensesheetlineinteger2": 0,
+                        "expensesheetlineinteger3": 0,
+                        "expensesheetlineinteger4": 0,
+                        "expensesheetlineinteger5": 0,
+                        "expensesheetlinedate1": "",
+                        "expensesheetlinedate2": "",
+                        "expensesheetlinetime1": "",
+                        "expensesheetlinetime2": "",
+                        "transferrednumberof": 1,
+                        "expensesheettype": "normal",
+                        "invoiceable": true,
+                        "expensejustification": "",
+                        "timesheetlineinstancekey": "",
+                        "billingpricebase": 75000,
+                        "billingpriceenterprise": 75000,
+                        "specification4name": "-",
+                        "specification5name": "-",
+                        "specification6name": "-",
+                        "specification7name": "-",
+                        "specification8name": "-",
+                        "specification9name": "-",
+                        "specification10name": "-",
+                        "localspec4name": "-",
+                        "localspec5name": "-",
+                        "localspec6name": "-",
+                        "localspec7name": "-",
+                        "localspec8name": "-",
+                        "localspec9name": "-",
+                        "localspec10name": "-",
+                        "purchaseordernumber": "",
+                        "purchaseorderlinenumber": 0,
+                        "settleviavendor": true,
+                        "jobnamevar": "Audit 2019",
+                        "activitytextvar": "Client Billable - Expenses",
+                        "tasknamevar": "Airfare",
+                        "taskpathvar": "",
+                        "linecompanynamevar": "RSM US LLP",
+                        "locationdescriptionvar": "Forensic, Litigation & Valuation",
+                        "entitydescriptionvar": "Forensic, Litigation & Valuation",
+                        "projectdescriptionvar": "TAC",
+                        "purposedescriptionvar": "Sean Williams",
+                        "specification1descriptionvar": "Residential Building Construction",
+                        "specification2descriptionvar": "Michigan",
+                        "specification3descriptionvar": "Michigan",
+                        "specification4descriptionvar": "-",
+                        "specification5descriptionvar": "-",
+                        "specification6descriptionvar": "",
+                        "specification7descriptionvar": "",
+                        "specification8descriptionvar": "",
+                        "specification9descriptionvar": "",
+                        "specification10descriptionvar": "",
+                        "localspec1descriptionvar": "None",
+                        "localspec2descriptionvar": "",
+                        "localspec3descriptionvar": "",
+                        "localspec4descriptionvar": "",
+                        "localspec5descriptionvar": "",
+                        "localspec6descriptionvar": "",
+                        "localspec7descriptionvar": "",
+                        "localspec8descriptionvar": "",
+                        "localspec9descriptionvar": "",
+                        "localspec10descriptionvar": "",
+                        "linecustomerpopup5var": "nil",
+                        "linecustomerremark15var": "",
+                        "linecustomerremark16var": "",
+                        "linecustomerremark17var": "",
+                        "linecustomerremark18var": "",
+                        "linecustomerremark19var": "",
+                        "linecustomerremark20var": "",
+                        "customernumbervar": "20000",
+                        "customernamevar": "Acme Cleaning",
+                        "languagevar": "english",
+                        "expensejustificationhelptextvar": "",
+                        "lineapprovalrelationvar": "expense_sheet_line",
+                        "lineapprovalnumbervar": 0,
+                        "lineapprovallinenumbervar": 0,
+                        "linecurrentapprovalstatusdescriptionvar": "",
+                        "linecurrentapprovalstatusvar": "nil",
+                        "linecanbeapprovedbycurrentuservar": false,
+                        "lineapprovedorrejectedbyvar": "",
+                        "lineapprovaldatevar": "",
+                        "lineapprovaltimevar": "",
+                        "lineremarkvar": "",
+                        "tooltipjobvar": "<b>Job: </b>10000, Audit 2019, Acme Cleaning",
+                        "tooltiptaskvar": "<b>Task: </b>401, Airfare",
+                        "tooltiptasklinebreakvar": "<br>",
+                        "tooltipactivityvar": "<b>Activity: </b>400, Client Billable - Expenses",
+                        "tooltipconclusionvar": "The line is complete",
+                        "linedetailsvar": "OK",
+                        "linedetailstypevar": "ok",
+                        "customerlevelnamevar": "Family/Parent",
+                        "level1customernumbervar": "20000",
+                        "level2customernumbervar": "",
+                        "level3customernumbervar": "",
+                        "level4customernumbervar": "",
+                        "level5customernumbervar": "",
+                        "level1customernamevar": "Acme Cleaning",
+                        "level2customernamevar": "",
+                        "level3customernamevar": "",
+                        "level4customernamevar": "",
+                        "level5customernamevar": "",
+                        "lineprojectmanagernumbervar": "1006",
+                        "lineprojectmanagernamevar": "Vic Ferarri",
+                        "justificationrequiredvar": false,
+                        "justificationcompletevar": true,
+                        "taskisperdiem": false,
+                        "unitpriceopen": true
+                    },
+                    "links": {
+                        "data:key:specification3name_specification3": {
+                            "rel": "data:key:specification3name_specification3",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification3name=-"
+                        },
+                        "data:key:specification2name_specification2": {
+                            "rel": "data:key:specification2name_specification2",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification2name=-"
+                        },
+                        "data:key:entityname_entity": {
+                            "rel": "data:key:entityname_entity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;entityname=1000"
+                        },
+                        "data:key:financevatcode3_financevatcode": {
+                            "rel": "data:key:financevatcode3_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:specification1name_specification1": {
+                            "rel": "data:key:specification1name_specification1",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification1name=10"
+                        },
+                        "data:key:locationname_location": {
+                            "rel": "data:key:locationname_location",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;locationname=1000"
+                        },
+                        "data:key:financevatcode2_financevatcode": {
+                            "rel": "data:key:financevatcode2_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:timesheetlineinstancekey_timesheetline": {
+                            "rel": "data:key:timesheetlineinstancekey_timesheetline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalline": {
+                            "rel": "data:key:lineapproval_approvalline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLineF09A3AB6-0EF7-4DD5-B795-001398DE1828;approvalrelation=expense_sheet_line;linenumber=0;approvalnumber=0"
+                        },
+                        "data:key:jobnumber_jobheader": {
+                            "rel": "data:key:jobnumber_jobheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber=10000"
+                        },
+                        "data:key:purposename_purpose": {
+                            "rel": "data:key:purposename_purpose",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;purposename=1001"
+                        },
+                        "data:key:expensesheetnumber_expensesheetheader": {
+                            "rel": "data:key:expensesheetnumber_expensesheetheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;expensesheetnumber=10700000"
+                        },
+                        "data:key:specification9name_specification9": {
+                            "rel": "data:key:specification9name_specification9",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification9name=-"
+                        },
+                        "data:key:specification8name_specification8": {
+                            "rel": "data:key:specification8name_specification8",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification8name=-"
+                        },
+                        "data:key:specification7name_specification7": {
+                            "rel": "data:key:specification7name_specification7",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification7name=-"
+                        },
+                        "data:key:activitynumber_activity": {
+                            "rel": "data:key:activitynumber_activity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification6name_specification6": {
+                            "rel": "data:key:specification6name_specification6",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification6name=-"
+                        },
+                        "data:key:projectname_project": {
+                            "rel": "data:key:projectname_project",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;projectname=10"
+                        },
+                        "data:key:specification5name_specification5": {
+                            "rel": "data:key:specification5name_specification5",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification5name=-"
+                        },
+                        "data:key:specification4name_specification4": {
+                            "rel": "data:key:specification4name_specification4",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification4name=-"
+                        },
+                        "data:key:activitynumber_expensemileageactivity": {
+                            "rel": "data:key:activitynumber_expensemileageactivity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification10name_specification10": {
+                            "rel": "data:key:specification10name_specification10",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification10name=-"
+                        },
+                        "data:key:financevatcode_financevatcode": {
+                            "rel": "data:key:financevatcode_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:favorite_expensemileagejobfavorite": {
+                            "rel": "data:key:favorite_expensemileagejobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:favorite_jobfavorite": {
+                            "rel": "data:key:favorite_jobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:companynumber_companyinformation": {
+                            "rel": "data:key:companynumber_companyinformation",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+                        },
+                        "data:key:instancekey_noteheader": {
+                            "rel": "data:key:instancekey_noteheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;notenumber=ExpenseSheetLineF09A3AB6-0EF7-4DD5-B795-001398DE1828"
+                        },
+                        "data:key:employeenumber_employee": {
+                            "rel": "data:key:employeenumber_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1001"
+                        },
+                        "data:key:transferredvatspecificationentry_vatspecificationentry": {
+                            "rel": "data:key:transferredvatspecificationentry_vatspecificationentry",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalheader": {
+                            "rel": "data:key:lineapproval_approvalheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLineF09A3AB6-0EF7-4DD5-B795-001398DE1828;approvalrelation=expense_sheet_line;approvalnumber=0"
+                        },
+                        "data:key:purchaseorderline": {
+                            "rel": "data:key:purchaseorderline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;linenumber=0;purchaseordernumber"
+                        },
+                        "action:print": {
+                            "rel": "action:print",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/print"
+                        },
+                        "action:copyexpensesheetline": {
+                            "rel": "action:copyexpensesheetline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/action;name=copyexpensesheetline"
+                        },
+                        "action:actionsequence": {
+                            "rel": "action:actionsequence",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/action;name=actionsequence"
+                        },
+                        "action:runreport": {
+                            "rel": "action:runreport",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/action;name=runreport"
+                        },
+                        "action:emailonaction": {
+                            "rel": "action:emailonaction",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/action;name=emailonaction"
+                        },
+                        "action:exportdataset": {
+                            "rel": "action:exportdataset",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/action;name=exportdataset"
+                        },
+                        "action:customattachdocumenttoline": {
+                            "rel": "action:customattachdocumenttoline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/0/action;name=customattachdocumenttoline"
+                        }
+                    }
+                },
+                {
+                    "meta": {
+                        "rowNumber": 1,
+                        "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\", \"table\"=\"6e074805c8893a6cb0ce905ac9b5f2af034db176\""
+                    },
+                    "data": {
+                        "expensesheetnumber": "10700000",
+                        "linenumber": 2,
+                        "entrydate": "2012-05-15",
+                        "jobnumber": "10000",
+                        "activitynumber": "400",
+                        "text": "Hotel",
+                        "currency": "usd",
+                        "amountbase": 120000,
+                        "amountcurrency": 120000,
+                        "financevatcode": "",
+                        "reference": "",
+                        "taskname": "403",
+                        "companynumber": "100",
+                        "locationname": "1000",
+                        "entityname": "1000",
+                        "projectname": "10",
+                        "purposename": "1001",
+                        "specification1name": "10",
+                        "specification2name": "-",
+                        "specification3name": "-",
+                        "localspec1name": "-",
+                        "localspec2name": "-",
+                        "localspec3name": "-",
+                        "startingdate": "",
+                        "startingtime": "",
+                        "endingdate": "",
+                        "closingtime": "",
+                        "remark1": "",
+                        "remark2": "",
+                        "remark3": "",
+                        "quantitya": 0,
+                        "quantityb": 0,
+                        "unitpricebase": 120000,
+                        "unitpricecurrency": 120000,
+                        "numberof": 1,
+                        "costtype": "outlays",
+                        "submitted": true,
+                        "newapprovalstatus": "nil",
+                        "approvalstatus": "nil",
+                        "approvedorrejectedby": "",
+                        "approvaldate": "",
+                        "commentprojectmanager": "",
+                        "approvedbysuperior": true,
+                        "transferredforposting": true,
+                        "transferredamountbase": 120000,
+                        "transferredquantitya": 0,
+                        "transferredquantityb": 0,
+                        "transferredamountcurrency": 120000,
+                        "employeenumber": "1001",
+                        "releasedbysuperior": false,
+                        "amountenterprise": 120000,
+                        "unitpriceenterprise": 120000,
+                        "transferredamountenterprise": 120000,
+                        "exchangerate": 1,
+                        "vatcurrency": 0,
+                        "vatbase": 0,
+                        "vatenterprise": 0,
+                        "transferredvatcurrency": 0,
+                        "transferredvatbase": 0,
+                        "transferredvatenterprise": 0,
+                        "unitpriceexvatbase": 120000,
+                        "unitpriceexvatcurrency": 120000,
+                        "unitpriceexvatenterprise": 120000,
+                        "documentname": "",
+                        "instancekey": "ExpenseSheetLineCE22A9B2-BD32-4A95-9D64-A4D0FE7F104E",
+                        "transactiontimestamp": "2020-01-09 14:32:08.560",
+                        "favorite": "",
+                        "transferredvatspecificationentry": "",
+                        "financevatcode2": "",
+                        "financevatcode3": "",
+                        "vat1currency": 0,
+                        "vat1base": 0,
+                        "vat1enterprise": 0,
+                        "vat2currency": 0,
+                        "vat2base": 0,
+                        "vat2enterprise": 0,
+                        "vat3currency": 0,
+                        "vat3base": 0,
+                        "vat3enterprise": 0,
+                        "numberproposed": 1,
+                        "numberproposedtransferred": 1,
+                        "billingpricetotalproposedcurrency": 120000,
+                        "billingpriceproposedcurrency": 120000,
+                        "billingpricecurrency": 120000,
+                        "useinvoiceproposal": false,
+                        "mileagefrom": "",
+                        "mileageto": "",
+                        "mileagevia": "",
+                        "mileagevehicle": "nil",
+                        "transactiontype": "Expense",
+                        "expensesheetlinetext1": "",
+                        "expensesheetlinetext2": "",
+                        "expensesheetlinetext3": "",
+                        "expensesheetlinetext4": "",
+                        "expensesheetlinetext5": "",
+                        "expensesheetlinetext6": "",
+                        "expensesheetlinetext7": "",
+                        "expensesheetlinetext8": "",
+                        "expensesheetlinetext9": "",
+                        "expensesheetlinetext10": "",
+                        "expensesheetlineinteger1": 0,
+                        "expensesheetlineinteger2": 0,
+                        "expensesheetlineinteger3": 0,
+                        "expensesheetlineinteger4": 0,
+                        "expensesheetlineinteger5": 0,
+                        "expensesheetlinedate1": "",
+                        "expensesheetlinedate2": "",
+                        "expensesheetlinetime1": "",
+                        "expensesheetlinetime2": "",
+                        "transferrednumberof": 1,
+                        "expensesheettype": "normal",
+                        "invoiceable": true,
+                        "expensejustification": "",
+                        "timesheetlineinstancekey": "",
+                        "billingpricebase": 120000,
+                        "billingpriceenterprise": 120000,
+                        "specification4name": "-",
+                        "specification5name": "-",
+                        "specification6name": "-",
+                        "specification7name": "-",
+                        "specification8name": "-",
+                        "specification9name": "-",
+                        "specification10name": "-",
+                        "localspec4name": "-",
+                        "localspec5name": "-",
+                        "localspec6name": "-",
+                        "localspec7name": "-",
+                        "localspec8name": "-",
+                        "localspec9name": "-",
+                        "localspec10name": "-",
+                        "purchaseordernumber": "",
+                        "purchaseorderlinenumber": 0,
+                        "settleviavendor": true,
+                        "jobnamevar": "Audit 2019",
+                        "activitytextvar": "Client Billable - Expenses",
+                        "tasknamevar": "Hotel/Lodging",
+                        "taskpathvar": "",
+                        "linecompanynamevar": "RSM US LLP",
+                        "locationdescriptionvar": "Forensic, Litigation & Valuation",
+                        "entitydescriptionvar": "Forensic, Litigation & Valuation",
+                        "projectdescriptionvar": "TAC",
+                        "purposedescriptionvar": "Sean Williams",
+                        "specification1descriptionvar": "Residential Building Construction",
+                        "specification2descriptionvar": "Michigan",
+                        "specification3descriptionvar": "Michigan",
+                        "specification4descriptionvar": "-",
+                        "specification5descriptionvar": "-",
+                        "specification6descriptionvar": "",
+                        "specification7descriptionvar": "",
+                        "specification8descriptionvar": "",
+                        "specification9descriptionvar": "",
+                        "specification10descriptionvar": "",
+                        "localspec1descriptionvar": "None",
+                        "localspec2descriptionvar": "",
+                        "localspec3descriptionvar": "",
+                        "localspec4descriptionvar": "",
+                        "localspec5descriptionvar": "",
+                        "localspec6descriptionvar": "",
+                        "localspec7descriptionvar": "",
+                        "localspec8descriptionvar": "",
+                        "localspec9descriptionvar": "",
+                        "localspec10descriptionvar": "",
+                        "linecustomerpopup5var": "nil",
+                        "linecustomerremark15var": "",
+                        "linecustomerremark16var": "",
+                        "linecustomerremark17var": "",
+                        "linecustomerremark18var": "",
+                        "linecustomerremark19var": "",
+                        "linecustomerremark20var": "",
+                        "customernumbervar": "20000",
+                        "customernamevar": "Acme Cleaning",
+                        "languagevar": "english",
+                        "expensejustificationhelptextvar": "",
+                        "lineapprovalrelationvar": "expense_sheet_line",
+                        "lineapprovalnumbervar": 0,
+                        "lineapprovallinenumbervar": 0,
+                        "linecurrentapprovalstatusdescriptionvar": "",
+                        "linecurrentapprovalstatusvar": "nil",
+                        "linecanbeapprovedbycurrentuservar": false,
+                        "lineapprovedorrejectedbyvar": "",
+                        "lineapprovaldatevar": "",
+                        "lineapprovaltimevar": "",
+                        "lineremarkvar": "",
+                        "tooltipjobvar": "<b>Job: </b>10000, Audit 2019, Acme Cleaning",
+                        "tooltiptaskvar": "<b>Task: </b>403, Hotel/Lodging",
+                        "tooltiptasklinebreakvar": "<br>",
+                        "tooltipactivityvar": "<b>Activity: </b>400, Client Billable - Expenses",
+                        "tooltipconclusionvar": "The line is complete",
+                        "linedetailsvar": "OK",
+                        "linedetailstypevar": "ok",
+                        "customerlevelnamevar": "Family/Parent",
+                        "level1customernumbervar": "20000",
+                        "level2customernumbervar": "",
+                        "level3customernumbervar": "",
+                        "level4customernumbervar": "",
+                        "level5customernumbervar": "",
+                        "level1customernamevar": "Acme Cleaning",
+                        "level2customernamevar": "",
+                        "level3customernamevar": "",
+                        "level4customernamevar": "",
+                        "level5customernamevar": "",
+                        "lineprojectmanagernumbervar": "1006",
+                        "lineprojectmanagernamevar": "Vic Ferarri",
+                        "justificationrequiredvar": false,
+                        "justificationcompletevar": true,
+                        "taskisperdiem": false,
+                        "unitpriceopen": true
+                    },
+                    "links": {
+                        "data:key:specification3name_specification3": {
+                            "rel": "data:key:specification3name_specification3",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification3name=-"
+                        },
+                        "data:key:specification2name_specification2": {
+                            "rel": "data:key:specification2name_specification2",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification2name=-"
+                        },
+                        "data:key:entityname_entity": {
+                            "rel": "data:key:entityname_entity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;entityname=1000"
+                        },
+                        "data:key:financevatcode3_financevatcode": {
+                            "rel": "data:key:financevatcode3_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:specification1name_specification1": {
+                            "rel": "data:key:specification1name_specification1",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification1name=10"
+                        },
+                        "data:key:locationname_location": {
+                            "rel": "data:key:locationname_location",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;locationname=1000"
+                        },
+                        "data:key:financevatcode2_financevatcode": {
+                            "rel": "data:key:financevatcode2_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:timesheetlineinstancekey_timesheetline": {
+                            "rel": "data:key:timesheetlineinstancekey_timesheetline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalline": {
+                            "rel": "data:key:lineapproval_approvalline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLineCE22A9B2-BD32-4A95-9D64-A4D0FE7F104E;approvalrelation=expense_sheet_line;linenumber=0;approvalnumber=0"
+                        },
+                        "data:key:jobnumber_jobheader": {
+                            "rel": "data:key:jobnumber_jobheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber=10000"
+                        },
+                        "data:key:purposename_purpose": {
+                            "rel": "data:key:purposename_purpose",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;purposename=1001"
+                        },
+                        "data:key:expensesheetnumber_expensesheetheader": {
+                            "rel": "data:key:expensesheetnumber_expensesheetheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;expensesheetnumber=10700000"
+                        },
+                        "data:key:specification9name_specification9": {
+                            "rel": "data:key:specification9name_specification9",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification9name=-"
+                        },
+                        "data:key:specification8name_specification8": {
+                            "rel": "data:key:specification8name_specification8",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification8name=-"
+                        },
+                        "data:key:specification7name_specification7": {
+                            "rel": "data:key:specification7name_specification7",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification7name=-"
+                        },
+                        "data:key:activitynumber_activity": {
+                            "rel": "data:key:activitynumber_activity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification6name_specification6": {
+                            "rel": "data:key:specification6name_specification6",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification6name=-"
+                        },
+                        "data:key:projectname_project": {
+                            "rel": "data:key:projectname_project",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;projectname=10"
+                        },
+                        "data:key:specification5name_specification5": {
+                            "rel": "data:key:specification5name_specification5",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification5name=-"
+                        },
+                        "data:key:specification4name_specification4": {
+                            "rel": "data:key:specification4name_specification4",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification4name=-"
+                        },
+                        "data:key:activitynumber_expensemileageactivity": {
+                            "rel": "data:key:activitynumber_expensemileageactivity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification10name_specification10": {
+                            "rel": "data:key:specification10name_specification10",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification10name=-"
+                        },
+                        "data:key:financevatcode_financevatcode": {
+                            "rel": "data:key:financevatcode_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:favorite_expensemileagejobfavorite": {
+                            "rel": "data:key:favorite_expensemileagejobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:favorite_jobfavorite": {
+                            "rel": "data:key:favorite_jobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:companynumber_companyinformation": {
+                            "rel": "data:key:companynumber_companyinformation",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+                        },
+                        "data:key:instancekey_noteheader": {
+                            "rel": "data:key:instancekey_noteheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;notenumber=ExpenseSheetLineCE22A9B2-BD32-4A95-9D64-A4D0FE7F104E"
+                        },
+                        "data:key:employeenumber_employee": {
+                            "rel": "data:key:employeenumber_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1001"
+                        },
+                        "data:key:transferredvatspecificationentry_vatspecificationentry": {
+                            "rel": "data:key:transferredvatspecificationentry_vatspecificationentry",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalheader": {
+                            "rel": "data:key:lineapproval_approvalheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLineCE22A9B2-BD32-4A95-9D64-A4D0FE7F104E;approvalrelation=expense_sheet_line;approvalnumber=0"
+                        },
+                        "data:key:purchaseorderline": {
+                            "rel": "data:key:purchaseorderline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;linenumber=0;purchaseordernumber"
+                        },
+                        "action:print": {
+                            "rel": "action:print",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/print"
+                        },
+                        "action:copyexpensesheetline": {
+                            "rel": "action:copyexpensesheetline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/action;name=copyexpensesheetline"
+                        },
+                        "action:actionsequence": {
+                            "rel": "action:actionsequence",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/action;name=actionsequence"
+                        },
+                        "action:runreport": {
+                            "rel": "action:runreport",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/action;name=runreport"
+                        },
+                        "action:emailonaction": {
+                            "rel": "action:emailonaction",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/action;name=emailonaction"
+                        },
+                        "action:exportdataset": {
+                            "rel": "action:exportdataset",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/action;name=exportdataset"
+                        },
+                        "action:customattachdocumenttoline": {
+                            "rel": "action:customattachdocumenttoline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/1/action;name=customattachdocumenttoline"
+                        }
+                    }
+                },
+                {
+                    "meta": {
+                        "rowNumber": 2,
+                        "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\", \"table\"=\"8f89cb129864a93a0ea7a2539da9fe524fc78fbf\""
+                    },
+                    "data": {
+                        "expensesheetnumber": "10700000",
+                        "linenumber": 3,
+                        "entrydate": "2012-05-15",
+                        "jobnumber": "10000",
+                        "activitynumber": "400",
+                        "text": "Car Rental",
+                        "currency": "usd",
+                        "amountbase": 13500,
+                        "amountcurrency": 13500,
+                        "financevatcode": "",
+                        "reference": "",
+                        "taskname": "404",
+                        "companynumber": "100",
+                        "locationname": "1000",
+                        "entityname": "1000",
+                        "projectname": "10",
+                        "purposename": "1001",
+                        "specification1name": "10",
+                        "specification2name": "-",
+                        "specification3name": "-",
+                        "localspec1name": "-",
+                        "localspec2name": "-",
+                        "localspec3name": "-",
+                        "startingdate": "",
+                        "startingtime": "",
+                        "endingdate": "",
+                        "closingtime": "",
+                        "remark1": "",
+                        "remark2": "",
+                        "remark3": "",
+                        "quantitya": 0,
+                        "quantityb": 0,
+                        "unitpricebase": 13500,
+                        "unitpricecurrency": 13500,
+                        "numberof": 1,
+                        "costtype": "outlays",
+                        "submitted": true,
+                        "newapprovalstatus": "nil",
+                        "approvalstatus": "nil",
+                        "approvedorrejectedby": "",
+                        "approvaldate": "",
+                        "commentprojectmanager": "",
+                        "approvedbysuperior": true,
+                        "transferredforposting": true,
+                        "transferredamountbase": 13500,
+                        "transferredquantitya": 0,
+                        "transferredquantityb": 0,
+                        "transferredamountcurrency": 13500,
+                        "employeenumber": "1001",
+                        "releasedbysuperior": false,
+                        "amountenterprise": 13500,
+                        "unitpriceenterprise": 13500,
+                        "transferredamountenterprise": 13500,
+                        "exchangerate": 1,
+                        "vatcurrency": 0,
+                        "vatbase": 0,
+                        "vatenterprise": 0,
+                        "transferredvatcurrency": 0,
+                        "transferredvatbase": 0,
+                        "transferredvatenterprise": 0,
+                        "unitpriceexvatbase": 13500,
+                        "unitpriceexvatcurrency": 13500,
+                        "unitpriceexvatenterprise": 13500,
+                        "documentname": "",
+                        "instancekey": "ExpenseSheetLine2EFFDB9E-7FAA-4FD0-8039-920370AA6FF9",
+                        "transactiontimestamp": "2020-01-09 14:32:08.560",
+                        "favorite": "",
+                        "transferredvatspecificationentry": "",
+                        "financevatcode2": "",
+                        "financevatcode3": "",
+                        "vat1currency": 0,
+                        "vat1base": 0,
+                        "vat1enterprise": 0,
+                        "vat2currency": 0,
+                        "vat2base": 0,
+                        "vat2enterprise": 0,
+                        "vat3currency": 0,
+                        "vat3base": 0,
+                        "vat3enterprise": 0,
+                        "numberproposed": 1,
+                        "numberproposedtransferred": 1,
+                        "billingpricetotalproposedcurrency": 13500,
+                        "billingpriceproposedcurrency": 13500,
+                        "billingpricecurrency": 13500,
+                        "useinvoiceproposal": false,
+                        "mileagefrom": "",
+                        "mileageto": "",
+                        "mileagevia": "",
+                        "mileagevehicle": "nil",
+                        "transactiontype": "Expense",
+                        "expensesheetlinetext1": "",
+                        "expensesheetlinetext2": "",
+                        "expensesheetlinetext3": "",
+                        "expensesheetlinetext4": "",
+                        "expensesheetlinetext5": "",
+                        "expensesheetlinetext6": "",
+                        "expensesheetlinetext7": "",
+                        "expensesheetlinetext8": "",
+                        "expensesheetlinetext9": "",
+                        "expensesheetlinetext10": "",
+                        "expensesheetlineinteger1": 0,
+                        "expensesheetlineinteger2": 0,
+                        "expensesheetlineinteger3": 0,
+                        "expensesheetlineinteger4": 0,
+                        "expensesheetlineinteger5": 0,
+                        "expensesheetlinedate1": "",
+                        "expensesheetlinedate2": "",
+                        "expensesheetlinetime1": "",
+                        "expensesheetlinetime2": "",
+                        "transferrednumberof": 1,
+                        "expensesheettype": "normal",
+                        "invoiceable": true,
+                        "expensejustification": "",
+                        "timesheetlineinstancekey": "",
+                        "billingpricebase": 13500,
+                        "billingpriceenterprise": 13500,
+                        "specification4name": "-",
+                        "specification5name": "-",
+                        "specification6name": "-",
+                        "specification7name": "-",
+                        "specification8name": "-",
+                        "specification9name": "-",
+                        "specification10name": "-",
+                        "localspec4name": "-",
+                        "localspec5name": "-",
+                        "localspec6name": "-",
+                        "localspec7name": "-",
+                        "localspec8name": "-",
+                        "localspec9name": "-",
+                        "localspec10name": "-",
+                        "purchaseordernumber": "",
+                        "purchaseorderlinenumber": 0,
+                        "settleviavendor": true,
+                        "jobnamevar": "Audit 2019",
+                        "activitytextvar": "Client Billable - Expenses",
+                        "tasknamevar": "Car Rental",
+                        "taskpathvar": "",
+                        "linecompanynamevar": "RSM US LLP",
+                        "locationdescriptionvar": "Forensic, Litigation & Valuation",
+                        "entitydescriptionvar": "Forensic, Litigation & Valuation",
+                        "projectdescriptionvar": "TAC",
+                        "purposedescriptionvar": "Sean Williams",
+                        "specification1descriptionvar": "Residential Building Construction",
+                        "specification2descriptionvar": "Michigan",
+                        "specification3descriptionvar": "Michigan",
+                        "specification4descriptionvar": "-",
+                        "specification5descriptionvar": "-",
+                        "specification6descriptionvar": "",
+                        "specification7descriptionvar": "",
+                        "specification8descriptionvar": "",
+                        "specification9descriptionvar": "",
+                        "specification10descriptionvar": "",
+                        "localspec1descriptionvar": "None",
+                        "localspec2descriptionvar": "",
+                        "localspec3descriptionvar": "",
+                        "localspec4descriptionvar": "",
+                        "localspec5descriptionvar": "",
+                        "localspec6descriptionvar": "",
+                        "localspec7descriptionvar": "",
+                        "localspec8descriptionvar": "",
+                        "localspec9descriptionvar": "",
+                        "localspec10descriptionvar": "",
+                        "linecustomerpopup5var": "nil",
+                        "linecustomerremark15var": "",
+                        "linecustomerremark16var": "",
+                        "linecustomerremark17var": "",
+                        "linecustomerremark18var": "",
+                        "linecustomerremark19var": "",
+                        "linecustomerremark20var": "",
+                        "customernumbervar": "20000",
+                        "customernamevar": "Acme Cleaning",
+                        "languagevar": "english",
+                        "expensejustificationhelptextvar": "",
+                        "lineapprovalrelationvar": "expense_sheet_line",
+                        "lineapprovalnumbervar": 0,
+                        "lineapprovallinenumbervar": 0,
+                        "linecurrentapprovalstatusdescriptionvar": "",
+                        "linecurrentapprovalstatusvar": "nil",
+                        "linecanbeapprovedbycurrentuservar": false,
+                        "lineapprovedorrejectedbyvar": "",
+                        "lineapprovaldatevar": "",
+                        "lineapprovaltimevar": "",
+                        "lineremarkvar": "",
+                        "tooltipjobvar": "<b>Job: </b>10000, Audit 2019, Acme Cleaning",
+                        "tooltiptaskvar": "<b>Task: </b>404, Car Rental",
+                        "tooltiptasklinebreakvar": "<br>",
+                        "tooltipactivityvar": "<b>Activity: </b>400, Client Billable - Expenses",
+                        "tooltipconclusionvar": "The line is complete",
+                        "linedetailsvar": "OK",
+                        "linedetailstypevar": "ok",
+                        "customerlevelnamevar": "Family/Parent",
+                        "level1customernumbervar": "20000",
+                        "level2customernumbervar": "",
+                        "level3customernumbervar": "",
+                        "level4customernumbervar": "",
+                        "level5customernumbervar": "",
+                        "level1customernamevar": "Acme Cleaning",
+                        "level2customernamevar": "",
+                        "level3customernamevar": "",
+                        "level4customernamevar": "",
+                        "level5customernamevar": "",
+                        "lineprojectmanagernumbervar": "1006",
+                        "lineprojectmanagernamevar": "Vic Ferarri",
+                        "justificationrequiredvar": false,
+                        "justificationcompletevar": true,
+                        "taskisperdiem": false,
+                        "unitpriceopen": true
+                    },
+                    "links": {
+                        "data:key:specification3name_specification3": {
+                            "rel": "data:key:specification3name_specification3",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification3name=-"
+                        },
+                        "data:key:specification2name_specification2": {
+                            "rel": "data:key:specification2name_specification2",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification2name=-"
+                        },
+                        "data:key:entityname_entity": {
+                            "rel": "data:key:entityname_entity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;entityname=1000"
+                        },
+                        "data:key:financevatcode3_financevatcode": {
+                            "rel": "data:key:financevatcode3_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:specification1name_specification1": {
+                            "rel": "data:key:specification1name_specification1",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification1name=10"
+                        },
+                        "data:key:locationname_location": {
+                            "rel": "data:key:locationname_location",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;locationname=1000"
+                        },
+                        "data:key:financevatcode2_financevatcode": {
+                            "rel": "data:key:financevatcode2_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:timesheetlineinstancekey_timesheetline": {
+                            "rel": "data:key:timesheetlineinstancekey_timesheetline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalline": {
+                            "rel": "data:key:lineapproval_approvalline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLine2EFFDB9E-7FAA-4FD0-8039-920370AA6FF9;approvalrelation=expense_sheet_line;linenumber=0;approvalnumber=0"
+                        },
+                        "data:key:jobnumber_jobheader": {
+                            "rel": "data:key:jobnumber_jobheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber=10000"
+                        },
+                        "data:key:purposename_purpose": {
+                            "rel": "data:key:purposename_purpose",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;purposename=1001"
+                        },
+                        "data:key:expensesheetnumber_expensesheetheader": {
+                            "rel": "data:key:expensesheetnumber_expensesheetheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;expensesheetnumber=10700000"
+                        },
+                        "data:key:specification9name_specification9": {
+                            "rel": "data:key:specification9name_specification9",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification9name=-"
+                        },
+                        "data:key:specification8name_specification8": {
+                            "rel": "data:key:specification8name_specification8",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification8name=-"
+                        },
+                        "data:key:specification7name_specification7": {
+                            "rel": "data:key:specification7name_specification7",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification7name=-"
+                        },
+                        "data:key:activitynumber_activity": {
+                            "rel": "data:key:activitynumber_activity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification6name_specification6": {
+                            "rel": "data:key:specification6name_specification6",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification6name=-"
+                        },
+                        "data:key:projectname_project": {
+                            "rel": "data:key:projectname_project",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;projectname=10"
+                        },
+                        "data:key:specification5name_specification5": {
+                            "rel": "data:key:specification5name_specification5",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification5name=-"
+                        },
+                        "data:key:specification4name_specification4": {
+                            "rel": "data:key:specification4name_specification4",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification4name=-"
+                        },
+                        "data:key:activitynumber_expensemileageactivity": {
+                            "rel": "data:key:activitynumber_expensemileageactivity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification10name_specification10": {
+                            "rel": "data:key:specification10name_specification10",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification10name=-"
+                        },
+                        "data:key:financevatcode_financevatcode": {
+                            "rel": "data:key:financevatcode_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:favorite_expensemileagejobfavorite": {
+                            "rel": "data:key:favorite_expensemileagejobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:favorite_jobfavorite": {
+                            "rel": "data:key:favorite_jobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:companynumber_companyinformation": {
+                            "rel": "data:key:companynumber_companyinformation",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+                        },
+                        "data:key:instancekey_noteheader": {
+                            "rel": "data:key:instancekey_noteheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;notenumber=ExpenseSheetLine2EFFDB9E-7FAA-4FD0-8039-920370AA6FF9"
+                        },
+                        "data:key:employeenumber_employee": {
+                            "rel": "data:key:employeenumber_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1001"
+                        },
+                        "data:key:transferredvatspecificationentry_vatspecificationentry": {
+                            "rel": "data:key:transferredvatspecificationentry_vatspecificationentry",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalheader": {
+                            "rel": "data:key:lineapproval_approvalheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLine2EFFDB9E-7FAA-4FD0-8039-920370AA6FF9;approvalrelation=expense_sheet_line;approvalnumber=0"
+                        },
+                        "data:key:purchaseorderline": {
+                            "rel": "data:key:purchaseorderline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;linenumber=0;purchaseordernumber"
+                        },
+                        "action:print": {
+                            "rel": "action:print",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/print"
+                        },
+                        "action:copyexpensesheetline": {
+                            "rel": "action:copyexpensesheetline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/action;name=copyexpensesheetline"
+                        },
+                        "action:actionsequence": {
+                            "rel": "action:actionsequence",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/action;name=actionsequence"
+                        },
+                        "action:runreport": {
+                            "rel": "action:runreport",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/action;name=runreport"
+                        },
+                        "action:emailonaction": {
+                            "rel": "action:emailonaction",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/action;name=emailonaction"
+                        },
+                        "action:exportdataset": {
+                            "rel": "action:exportdataset",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/action;name=exportdataset"
+                        },
+                        "action:customattachdocumenttoline": {
+                            "rel": "action:customattachdocumenttoline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/2/action;name=customattachdocumenttoline"
+                        }
+                    }
+                },
+                {
+                    "meta": {
+                        "rowNumber": 3,
+                        "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\", \"table\"=\"f4719237975ea1f75287ededbf5e73cf620ca7c3\""
+                    },
+                    "data": {
+                        "expensesheetnumber": "10700000",
+                        "linenumber": 4,
+                        "entrydate": "2012-05-15",
+                        "jobnumber": "10000",
+                        "activitynumber": "400",
+                        "text": "Taxi",
+                        "currency": "usd",
+                        "amountbase": 6000,
+                        "amountcurrency": 6000,
+                        "financevatcode": "",
+                        "reference": "",
+                        "taskname": "405",
+                        "companynumber": "100",
+                        "locationname": "1000",
+                        "entityname": "1000",
+                        "projectname": "10",
+                        "purposename": "1001",
+                        "specification1name": "10",
+                        "specification2name": "-",
+                        "specification3name": "-",
+                        "localspec1name": "-",
+                        "localspec2name": "-",
+                        "localspec3name": "-",
+                        "startingdate": "",
+                        "startingtime": "",
+                        "endingdate": "",
+                        "closingtime": "",
+                        "remark1": "",
+                        "remark2": "",
+                        "remark3": "",
+                        "quantitya": 0,
+                        "quantityb": 0,
+                        "unitpricebase": 6000,
+                        "unitpricecurrency": 6000,
+                        "numberof": 1,
+                        "costtype": "outlays",
+                        "submitted": true,
+                        "newapprovalstatus": "nil",
+                        "approvalstatus": "nil",
+                        "approvedorrejectedby": "",
+                        "approvaldate": "",
+                        "commentprojectmanager": "",
+                        "approvedbysuperior": true,
+                        "transferredforposting": true,
+                        "transferredamountbase": 6000,
+                        "transferredquantitya": 0,
+                        "transferredquantityb": 0,
+                        "transferredamountcurrency": 6000,
+                        "employeenumber": "1001",
+                        "releasedbysuperior": false,
+                        "amountenterprise": 6000,
+                        "unitpriceenterprise": 6000,
+                        "transferredamountenterprise": 6000,
+                        "exchangerate": 1,
+                        "vatcurrency": 0,
+                        "vatbase": 0,
+                        "vatenterprise": 0,
+                        "transferredvatcurrency": 0,
+                        "transferredvatbase": 0,
+                        "transferredvatenterprise": 0,
+                        "unitpriceexvatbase": 6000,
+                        "unitpriceexvatcurrency": 6000,
+                        "unitpriceexvatenterprise": 6000,
+                        "documentname": "",
+                        "instancekey": "ExpenseSheetLine467048AB-10D0-426D-B055-F3DAF76E922E",
+                        "transactiontimestamp": "2020-01-09 14:32:08.560",
+                        "favorite": "",
+                        "transferredvatspecificationentry": "",
+                        "financevatcode2": "",
+                        "financevatcode3": "",
+                        "vat1currency": 0,
+                        "vat1base": 0,
+                        "vat1enterprise": 0,
+                        "vat2currency": 0,
+                        "vat2base": 0,
+                        "vat2enterprise": 0,
+                        "vat3currency": 0,
+                        "vat3base": 0,
+                        "vat3enterprise": 0,
+                        "numberproposed": 1,
+                        "numberproposedtransferred": 1,
+                        "billingpricetotalproposedcurrency": 6000,
+                        "billingpriceproposedcurrency": 6000,
+                        "billingpricecurrency": 6000,
+                        "useinvoiceproposal": false,
+                        "mileagefrom": "",
+                        "mileageto": "",
+                        "mileagevia": "",
+                        "mileagevehicle": "nil",
+                        "transactiontype": "Expense",
+                        "expensesheetlinetext1": "",
+                        "expensesheetlinetext2": "",
+                        "expensesheetlinetext3": "",
+                        "expensesheetlinetext4": "",
+                        "expensesheetlinetext5": "",
+                        "expensesheetlinetext6": "",
+                        "expensesheetlinetext7": "",
+                        "expensesheetlinetext8": "",
+                        "expensesheetlinetext9": "",
+                        "expensesheetlinetext10": "",
+                        "expensesheetlineinteger1": 0,
+                        "expensesheetlineinteger2": 0,
+                        "expensesheetlineinteger3": 0,
+                        "expensesheetlineinteger4": 0,
+                        "expensesheetlineinteger5": 0,
+                        "expensesheetlinedate1": "",
+                        "expensesheetlinedate2": "",
+                        "expensesheetlinetime1": "",
+                        "expensesheetlinetime2": "",
+                        "transferrednumberof": 1,
+                        "expensesheettype": "normal",
+                        "invoiceable": true,
+                        "expensejustification": "",
+                        "timesheetlineinstancekey": "",
+                        "billingpricebase": 6000,
+                        "billingpriceenterprise": 6000,
+                        "specification4name": "-",
+                        "specification5name": "-",
+                        "specification6name": "-",
+                        "specification7name": "-",
+                        "specification8name": "-",
+                        "specification9name": "-",
+                        "specification10name": "-",
+                        "localspec4name": "-",
+                        "localspec5name": "-",
+                        "localspec6name": "-",
+                        "localspec7name": "-",
+                        "localspec8name": "-",
+                        "localspec9name": "-",
+                        "localspec10name": "-",
+                        "purchaseordernumber": "",
+                        "purchaseorderlinenumber": 0,
+                        "settleviavendor": true,
+                        "jobnamevar": "Audit 2019",
+                        "activitytextvar": "Client Billable - Expenses",
+                        "tasknamevar": "Taxi/Bus/Metro",
+                        "taskpathvar": "",
+                        "linecompanynamevar": "RSM US LLP",
+                        "locationdescriptionvar": "Forensic, Litigation & Valuation",
+                        "entitydescriptionvar": "Forensic, Litigation & Valuation",
+                        "projectdescriptionvar": "TAC",
+                        "purposedescriptionvar": "Sean Williams",
+                        "specification1descriptionvar": "Residential Building Construction",
+                        "specification2descriptionvar": "Michigan",
+                        "specification3descriptionvar": "Michigan",
+                        "specification4descriptionvar": "-",
+                        "specification5descriptionvar": "-",
+                        "specification6descriptionvar": "",
+                        "specification7descriptionvar": "",
+                        "specification8descriptionvar": "",
+                        "specification9descriptionvar": "",
+                        "specification10descriptionvar": "",
+                        "localspec1descriptionvar": "None",
+                        "localspec2descriptionvar": "",
+                        "localspec3descriptionvar": "",
+                        "localspec4descriptionvar": "",
+                        "localspec5descriptionvar": "",
+                        "localspec6descriptionvar": "",
+                        "localspec7descriptionvar": "",
+                        "localspec8descriptionvar": "",
+                        "localspec9descriptionvar": "",
+                        "localspec10descriptionvar": "",
+                        "linecustomerpopup5var": "nil",
+                        "linecustomerremark15var": "",
+                        "linecustomerremark16var": "",
+                        "linecustomerremark17var": "",
+                        "linecustomerremark18var": "",
+                        "linecustomerremark19var": "",
+                        "linecustomerremark20var": "",
+                        "customernumbervar": "20000",
+                        "customernamevar": "Acme Cleaning",
+                        "languagevar": "english",
+                        "expensejustificationhelptextvar": "",
+                        "lineapprovalrelationvar": "expense_sheet_line",
+                        "lineapprovalnumbervar": 0,
+                        "lineapprovallinenumbervar": 0,
+                        "linecurrentapprovalstatusdescriptionvar": "",
+                        "linecurrentapprovalstatusvar": "nil",
+                        "linecanbeapprovedbycurrentuservar": false,
+                        "lineapprovedorrejectedbyvar": "",
+                        "lineapprovaldatevar": "",
+                        "lineapprovaltimevar": "",
+                        "lineremarkvar": "",
+                        "tooltipjobvar": "<b>Job: </b>10000, Audit 2019, Acme Cleaning",
+                        "tooltiptaskvar": "<b>Task: </b>405, Taxi/Bus/Metro",
+                        "tooltiptasklinebreakvar": "<br>",
+                        "tooltipactivityvar": "<b>Activity: </b>400, Client Billable - Expenses",
+                        "tooltipconclusionvar": "The line is complete",
+                        "linedetailsvar": "OK",
+                        "linedetailstypevar": "ok",
+                        "customerlevelnamevar": "Family/Parent",
+                        "level1customernumbervar": "20000",
+                        "level2customernumbervar": "",
+                        "level3customernumbervar": "",
+                        "level4customernumbervar": "",
+                        "level5customernumbervar": "",
+                        "level1customernamevar": "Acme Cleaning",
+                        "level2customernamevar": "",
+                        "level3customernamevar": "",
+                        "level4customernamevar": "",
+                        "level5customernamevar": "",
+                        "lineprojectmanagernumbervar": "1006",
+                        "lineprojectmanagernamevar": "Vic Ferarri",
+                        "justificationrequiredvar": false,
+                        "justificationcompletevar": true,
+                        "taskisperdiem": false,
+                        "unitpriceopen": true
+                    },
+                    "links": {
+                        "data:key:specification3name_specification3": {
+                            "rel": "data:key:specification3name_specification3",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification3name=-"
+                        },
+                        "data:key:specification2name_specification2": {
+                            "rel": "data:key:specification2name_specification2",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification2name=-"
+                        },
+                        "data:key:entityname_entity": {
+                            "rel": "data:key:entityname_entity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;entityname=1000"
+                        },
+                        "data:key:financevatcode3_financevatcode": {
+                            "rel": "data:key:financevatcode3_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:specification1name_specification1": {
+                            "rel": "data:key:specification1name_specification1",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification1name=10"
+                        },
+                        "data:key:locationname_location": {
+                            "rel": "data:key:locationname_location",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;locationname=1000"
+                        },
+                        "data:key:financevatcode2_financevatcode": {
+                            "rel": "data:key:financevatcode2_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:timesheetlineinstancekey_timesheetline": {
+                            "rel": "data:key:timesheetlineinstancekey_timesheetline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalline": {
+                            "rel": "data:key:lineapproval_approvalline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLine467048AB-10D0-426D-B055-F3DAF76E922E;approvalrelation=expense_sheet_line;linenumber=0;approvalnumber=0"
+                        },
+                        "data:key:jobnumber_jobheader": {
+                            "rel": "data:key:jobnumber_jobheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber=10000"
+                        },
+                        "data:key:purposename_purpose": {
+                            "rel": "data:key:purposename_purpose",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;purposename=1001"
+                        },
+                        "data:key:expensesheetnumber_expensesheetheader": {
+                            "rel": "data:key:expensesheetnumber_expensesheetheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;expensesheetnumber=10700000"
+                        },
+                        "data:key:specification9name_specification9": {
+                            "rel": "data:key:specification9name_specification9",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification9name=-"
+                        },
+                        "data:key:specification8name_specification8": {
+                            "rel": "data:key:specification8name_specification8",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification8name=-"
+                        },
+                        "data:key:specification7name_specification7": {
+                            "rel": "data:key:specification7name_specification7",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification7name=-"
+                        },
+                        "data:key:activitynumber_activity": {
+                            "rel": "data:key:activitynumber_activity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification6name_specification6": {
+                            "rel": "data:key:specification6name_specification6",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification6name=-"
+                        },
+                        "data:key:projectname_project": {
+                            "rel": "data:key:projectname_project",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;projectname=10"
+                        },
+                        "data:key:specification5name_specification5": {
+                            "rel": "data:key:specification5name_specification5",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification5name=-"
+                        },
+                        "data:key:specification4name_specification4": {
+                            "rel": "data:key:specification4name_specification4",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification4name=-"
+                        },
+                        "data:key:activitynumber_expensemileageactivity": {
+                            "rel": "data:key:activitynumber_expensemileageactivity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification10name_specification10": {
+                            "rel": "data:key:specification10name_specification10",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification10name=-"
+                        },
+                        "data:key:financevatcode_financevatcode": {
+                            "rel": "data:key:financevatcode_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:favorite_expensemileagejobfavorite": {
+                            "rel": "data:key:favorite_expensemileagejobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:favorite_jobfavorite": {
+                            "rel": "data:key:favorite_jobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:companynumber_companyinformation": {
+                            "rel": "data:key:companynumber_companyinformation",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+                        },
+                        "data:key:instancekey_noteheader": {
+                            "rel": "data:key:instancekey_noteheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;notenumber=ExpenseSheetLine467048AB-10D0-426D-B055-F3DAF76E922E"
+                        },
+                        "data:key:employeenumber_employee": {
+                            "rel": "data:key:employeenumber_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1001"
+                        },
+                        "data:key:transferredvatspecificationentry_vatspecificationentry": {
+                            "rel": "data:key:transferredvatspecificationentry_vatspecificationentry",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalheader": {
+                            "rel": "data:key:lineapproval_approvalheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLine467048AB-10D0-426D-B055-F3DAF76E922E;approvalrelation=expense_sheet_line;approvalnumber=0"
+                        },
+                        "data:key:purchaseorderline": {
+                            "rel": "data:key:purchaseorderline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;linenumber=0;purchaseordernumber"
+                        },
+                        "action:print": {
+                            "rel": "action:print",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/print"
+                        },
+                        "action:copyexpensesheetline": {
+                            "rel": "action:copyexpensesheetline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/action;name=copyexpensesheetline"
+                        },
+                        "action:actionsequence": {
+                            "rel": "action:actionsequence",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/action;name=actionsequence"
+                        },
+                        "action:runreport": {
+                            "rel": "action:runreport",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/action;name=runreport"
+                        },
+                        "action:emailonaction": {
+                            "rel": "action:emailonaction",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/action;name=emailonaction"
+                        },
+                        "action:exportdataset": {
+                            "rel": "action:exportdataset",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/action;name=exportdataset"
+                        },
+                        "action:customattachdocumenttoline": {
+                            "rel": "action:customattachdocumenttoline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/3/action;name=customattachdocumenttoline"
+                        }
+                    }
+                },
+                {
+                    "meta": {
+                        "rowNumber": 4,
+                        "concurrencyControl": "\"card\"=\"2478a862713f8f5e812bbf34db701b07fd4fb8ac\", \"table\"=\"cae7f541405ec53733017bf8cb6c789b66f85cfd\""
+                    },
+                    "data": {
+                        "expensesheetnumber": "10700000",
+                        "linenumber": 5,
+                        "entrydate": "2012-05-15",
+                        "jobnumber": "10000",
+                        "activitynumber": "400",
+                        "text": "Meals",
+                        "currency": "usd",
+                        "amountbase": 21000,
+                        "amountcurrency": 21000,
+                        "financevatcode": "",
+                        "reference": "",
+                        "taskname": "407",
+                        "companynumber": "100",
+                        "locationname": "1000",
+                        "entityname": "1000",
+                        "projectname": "10",
+                        "purposename": "1001",
+                        "specification1name": "10",
+                        "specification2name": "-",
+                        "specification3name": "-",
+                        "localspec1name": "-",
+                        "localspec2name": "-",
+                        "localspec3name": "-",
+                        "startingdate": "",
+                        "startingtime": "",
+                        "endingdate": "",
+                        "closingtime": "",
+                        "remark1": "",
+                        "remark2": "",
+                        "remark3": "",
+                        "quantitya": 0,
+                        "quantityb": 0,
+                        "unitpricebase": 21000,
+                        "unitpricecurrency": 21000,
+                        "numberof": 1,
+                        "costtype": "outlays",
+                        "submitted": true,
+                        "newapprovalstatus": "nil",
+                        "approvalstatus": "nil",
+                        "approvedorrejectedby": "",
+                        "approvaldate": "",
+                        "commentprojectmanager": "",
+                        "approvedbysuperior": true,
+                        "transferredforposting": true,
+                        "transferredamountbase": 21000,
+                        "transferredquantitya": 0,
+                        "transferredquantityb": 0,
+                        "transferredamountcurrency": 21000,
+                        "employeenumber": "1001",
+                        "releasedbysuperior": false,
+                        "amountenterprise": 21000,
+                        "unitpriceenterprise": 21000,
+                        "transferredamountenterprise": 21000,
+                        "exchangerate": 1,
+                        "vatcurrency": 0,
+                        "vatbase": 0,
+                        "vatenterprise": 0,
+                        "transferredvatcurrency": 0,
+                        "transferredvatbase": 0,
+                        "transferredvatenterprise": 0,
+                        "unitpriceexvatbase": 21000,
+                        "unitpriceexvatcurrency": 21000,
+                        "unitpriceexvatenterprise": 21000,
+                        "documentname": "",
+                        "instancekey": "ExpenseSheetLine0C3E505D-3EBF-4248-A0DC-547675EA3A0B",
+                        "transactiontimestamp": "2020-01-09 14:32:08.560",
+                        "favorite": "",
+                        "transferredvatspecificationentry": "",
+                        "financevatcode2": "",
+                        "financevatcode3": "",
+                        "vat1currency": 0,
+                        "vat1base": 0,
+                        "vat1enterprise": 0,
+                        "vat2currency": 0,
+                        "vat2base": 0,
+                        "vat2enterprise": 0,
+                        "vat3currency": 0,
+                        "vat3base": 0,
+                        "vat3enterprise": 0,
+                        "numberproposed": 1,
+                        "numberproposedtransferred": 1,
+                        "billingpricetotalproposedcurrency": 21000,
+                        "billingpriceproposedcurrency": 21000,
+                        "billingpricecurrency": 21000,
+                        "useinvoiceproposal": false,
+                        "mileagefrom": "",
+                        "mileageto": "",
+                        "mileagevia": "",
+                        "mileagevehicle": "nil",
+                        "transactiontype": "Expense",
+                        "expensesheetlinetext1": "",
+                        "expensesheetlinetext2": "",
+                        "expensesheetlinetext3": "",
+                        "expensesheetlinetext4": "",
+                        "expensesheetlinetext5": "",
+                        "expensesheetlinetext6": "",
+                        "expensesheetlinetext7": "",
+                        "expensesheetlinetext8": "",
+                        "expensesheetlinetext9": "",
+                        "expensesheetlinetext10": "",
+                        "expensesheetlineinteger1": 0,
+                        "expensesheetlineinteger2": 0,
+                        "expensesheetlineinteger3": 0,
+                        "expensesheetlineinteger4": 0,
+                        "expensesheetlineinteger5": 0,
+                        "expensesheetlinedate1": "",
+                        "expensesheetlinedate2": "",
+                        "expensesheetlinetime1": "",
+                        "expensesheetlinetime2": "",
+                        "transferrednumberof": 1,
+                        "expensesheettype": "normal",
+                        "invoiceable": true,
+                        "expensejustification": "",
+                        "timesheetlineinstancekey": "",
+                        "billingpricebase": 21000,
+                        "billingpriceenterprise": 21000,
+                        "specification4name": "-",
+                        "specification5name": "-",
+                        "specification6name": "-",
+                        "specification7name": "-",
+                        "specification8name": "-",
+                        "specification9name": "-",
+                        "specification10name": "-",
+                        "localspec4name": "-",
+                        "localspec5name": "-",
+                        "localspec6name": "-",
+                        "localspec7name": "-",
+                        "localspec8name": "-",
+                        "localspec9name": "-",
+                        "localspec10name": "-",
+                        "purchaseordernumber": "",
+                        "purchaseorderlinenumber": 0,
+                        "settleviavendor": true,
+                        "jobnamevar": "Audit 2019",
+                        "activitytextvar": "Client Billable - Expenses",
+                        "tasknamevar": "Meals & Entertainment",
+                        "taskpathvar": "",
+                        "linecompanynamevar": "RSM US LLP",
+                        "locationdescriptionvar": "Forensic, Litigation & Valuation",
+                        "entitydescriptionvar": "Forensic, Litigation & Valuation",
+                        "projectdescriptionvar": "TAC",
+                        "purposedescriptionvar": "Sean Williams",
+                        "specification1descriptionvar": "Residential Building Construction",
+                        "specification2descriptionvar": "Michigan",
+                        "specification3descriptionvar": "Michigan",
+                        "specification4descriptionvar": "-",
+                        "specification5descriptionvar": "-",
+                        "specification6descriptionvar": "",
+                        "specification7descriptionvar": "",
+                        "specification8descriptionvar": "",
+                        "specification9descriptionvar": "",
+                        "specification10descriptionvar": "",
+                        "localspec1descriptionvar": "None",
+                        "localspec2descriptionvar": "",
+                        "localspec3descriptionvar": "",
+                        "localspec4descriptionvar": "",
+                        "localspec5descriptionvar": "",
+                        "localspec6descriptionvar": "",
+                        "localspec7descriptionvar": "",
+                        "localspec8descriptionvar": "",
+                        "localspec9descriptionvar": "",
+                        "localspec10descriptionvar": "",
+                        "linecustomerpopup5var": "nil",
+                        "linecustomerremark15var": "",
+                        "linecustomerremark16var": "",
+                        "linecustomerremark17var": "",
+                        "linecustomerremark18var": "",
+                        "linecustomerremark19var": "",
+                        "linecustomerremark20var": "",
+                        "customernumbervar": "20000",
+                        "customernamevar": "Acme Cleaning",
+                        "languagevar": "english",
+                        "expensejustificationhelptextvar": "",
+                        "lineapprovalrelationvar": "expense_sheet_line",
+                        "lineapprovalnumbervar": 0,
+                        "lineapprovallinenumbervar": 0,
+                        "linecurrentapprovalstatusdescriptionvar": "",
+                        "linecurrentapprovalstatusvar": "nil",
+                        "linecanbeapprovedbycurrentuservar": false,
+                        "lineapprovedorrejectedbyvar": "",
+                        "lineapprovaldatevar": "",
+                        "lineapprovaltimevar": "",
+                        "lineremarkvar": "",
+                        "tooltipjobvar": "<b>Job: </b>10000, Audit 2019, Acme Cleaning",
+                        "tooltiptaskvar": "<b>Task: </b>407, Meals & Entertainment",
+                        "tooltiptasklinebreakvar": "<br>",
+                        "tooltipactivityvar": "<b>Activity: </b>400, Client Billable - Expenses",
+                        "tooltipconclusionvar": "The line is complete",
+                        "linedetailsvar": "OK",
+                        "linedetailstypevar": "ok",
+                        "customerlevelnamevar": "Family/Parent",
+                        "level1customernumbervar": "20000",
+                        "level2customernumbervar": "",
+                        "level3customernumbervar": "",
+                        "level4customernumbervar": "",
+                        "level5customernumbervar": "",
+                        "level1customernamevar": "Acme Cleaning",
+                        "level2customernamevar": "",
+                        "level3customernamevar": "",
+                        "level4customernamevar": "",
+                        "level5customernamevar": "",
+                        "lineprojectmanagernumbervar": "1006",
+                        "lineprojectmanagernamevar": "Vic Ferarri",
+                        "justificationrequiredvar": false,
+                        "justificationcompletevar": true,
+                        "taskisperdiem": false,
+                        "unitpriceopen": true
+                    },
+                    "links": {
+                        "data:key:specification3name_specification3": {
+                            "rel": "data:key:specification3name_specification3",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification3name=-"
+                        },
+                        "data:key:specification2name_specification2": {
+                            "rel": "data:key:specification2name_specification2",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification2name=-"
+                        },
+                        "data:key:entityname_entity": {
+                            "rel": "data:key:entityname_entity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;entityname=1000"
+                        },
+                        "data:key:financevatcode3_financevatcode": {
+                            "rel": "data:key:financevatcode3_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:specification1name_specification1": {
+                            "rel": "data:key:specification1name_specification1",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification1name=10"
+                        },
+                        "data:key:locationname_location": {
+                            "rel": "data:key:locationname_location",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;locationname=1000"
+                        },
+                        "data:key:financevatcode2_financevatcode": {
+                            "rel": "data:key:financevatcode2_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:timesheetlineinstancekey_timesheetline": {
+                            "rel": "data:key:timesheetlineinstancekey_timesheetline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalline": {
+                            "rel": "data:key:lineapproval_approvalline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLine0C3E505D-3EBF-4248-A0DC-547675EA3A0B;approvalrelation=expense_sheet_line;linenumber=0;approvalnumber=0"
+                        },
+                        "data:key:jobnumber_jobheader": {
+                            "rel": "data:key:jobnumber_jobheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber=10000"
+                        },
+                        "data:key:purposename_purpose": {
+                            "rel": "data:key:purposename_purpose",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;purposename=1001"
+                        },
+                        "data:key:expensesheetnumber_expensesheetheader": {
+                            "rel": "data:key:expensesheetnumber_expensesheetheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;expensesheetnumber=10700000"
+                        },
+                        "data:key:specification9name_specification9": {
+                            "rel": "data:key:specification9name_specification9",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification9name=-"
+                        },
+                        "data:key:specification8name_specification8": {
+                            "rel": "data:key:specification8name_specification8",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification8name=-"
+                        },
+                        "data:key:specification7name_specification7": {
+                            "rel": "data:key:specification7name_specification7",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification7name=-"
+                        },
+                        "data:key:activitynumber_activity": {
+                            "rel": "data:key:activitynumber_activity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification6name_specification6": {
+                            "rel": "data:key:specification6name_specification6",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification6name=-"
+                        },
+                        "data:key:projectname_project": {
+                            "rel": "data:key:projectname_project",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;projectname=10"
+                        },
+                        "data:key:specification5name_specification5": {
+                            "rel": "data:key:specification5name_specification5",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification5name=-"
+                        },
+                        "data:key:specification4name_specification4": {
+                            "rel": "data:key:specification4name_specification4",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification4name=-"
+                        },
+                        "data:key:activitynumber_expensemileageactivity": {
+                            "rel": "data:key:activitynumber_expensemileageactivity",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=400"
+                        },
+                        "data:key:specification10name_specification10": {
+                            "rel": "data:key:specification10name_specification10",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification10name=-"
+                        },
+                        "data:key:financevatcode_financevatcode": {
+                            "rel": "data:key:financevatcode_financevatcode",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name"
+                        },
+                        "data:key:favorite_expensemileagejobfavorite": {
+                            "rel": "data:key:favorite_expensemileagejobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:favorite_jobfavorite": {
+                            "rel": "data:key:favorite_jobfavorite",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=1001"
+                        },
+                        "data:key:companynumber_companyinformation": {
+                            "rel": "data:key:companynumber_companyinformation",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+                        },
+                        "data:key:instancekey_noteheader": {
+                            "rel": "data:key:instancekey_noteheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;notenumber=ExpenseSheetLine0C3E505D-3EBF-4248-A0DC-547675EA3A0B"
+                        },
+                        "data:key:employeenumber_employee": {
+                            "rel": "data:key:employeenumber_employee",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=1001"
+                        },
+                        "data:key:transferredvatspecificationentry_vatspecificationentry": {
+                            "rel": "data:key:transferredvatspecificationentry_vatspecificationentry",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+                        },
+                        "data:key:lineapproval_approvalheader": {
+                            "rel": "data:key:lineapproval_approvalheader",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;approvalrelationinstancekey=ExpenseSheetLine0C3E505D-3EBF-4248-A0DC-547675EA3A0B;approvalrelation=expense_sheet_line;approvalnumber=0"
+                        },
+                        "data:key:purchaseorderline": {
+                            "rel": "data:key:purchaseorderline",
+                            "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;linenumber=0;purchaseordernumber"
+                        },
+                        "action:print": {
+                            "rel": "action:print",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/print"
+                        },
+                        "action:copyexpensesheetline": {
+                            "rel": "action:copyexpensesheetline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/action;name=copyexpensesheetline"
+                        },
+                        "action:actionsequence": {
+                            "rel": "action:actionsequence",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/action;name=actionsequence"
+                        },
+                        "action:runreport": {
+                            "rel": "action:runreport",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/action;name=runreport"
+                        },
+                        "action:emailonaction": {
+                            "rel": "action:emailonaction",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/action;name=emailonaction"
+                        },
+                        "action:exportdataset": {
+                            "rel": "action:exportdataset",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/action;name=exportdataset"
+                        },
+                        "action:customattachdocumenttoline": {
+                            "rel": "action:customattachdocumenttoline",
+                            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000/table/4/action;name=customattachdocumenttoline"
+                        }
+                    }
+                }
+            ],
+            "links": {}
+        }
+    },
+    "links": {
+        "self": {
+            "rel": "self",
+            "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/expensesheets/data;expensesheetnumber=10700000"
+        }
+    }
+}

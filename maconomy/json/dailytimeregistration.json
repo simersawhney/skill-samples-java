@@ -1,0 +1,529 @@
+{
+  "meta": {
+    "containerName": "dailytimeregistration"
+  },
+  "panes": {
+    "card": {
+      "meta": {
+        "paneName": "card",
+        "concurrencyControl": "",
+        "rowCount": 1,
+        "rowOffset": 0
+      },
+      "records": [
+        {
+          "meta": {
+            "rowNumber": 0,
+            "concurrencyControl": "\"card\"=\"8257672fe431a9cda836026d7c739dbdac1bc574\""
+          },
+          "data": {
+            "employeenumber": "150-109",
+            "instancekey": "TimeRegistrationHeader7D32D79B-9DF9-4211-81A3-B80217E28CC1",
+            "transactiontimestamp": "2020-03-09 10:05:19.950",
+            "latestchangetodate": "2017-10-02",
+            "dateoflatestchange": "2020-03-06",
+            "timeoflatestchange": "13:57:38",
+            "latestchangetoemployeenumber": "8000",
+            "currentemployeenumbervar": "150-109",
+            "employeenumbervar": "150-109",
+            "employeenamevar": "Bill Barnard",
+            "datevar": "2020-03-09",
+            "timesheetstatusvar": "00111110011111001111100111110;0111110000000000000000000000000,000000000000000000000000000000",
+            "timeexpectedvar": "00111110011111001111100111110;0111110011111001111100111110011,111001111100111110011111001111",
+            "selectedtimesheetstatusvar": "0",
+            "selectedtimeexpectedvar": "1",
+            "isproxycurrentemployeevar": true,
+            "textforlinktojobfavoritesvar": "Edit Favorites",
+            "favoritevar": "",
+            "registrationnotevar": "",
+            "numberofvar": 0,
+            "dailydescriptionvar": "",
+            "totalnumbervar": 1,
+            "copyfromdatevar": "2020-03-08",
+            "fixednumbervar": 8,
+            "overtimenumbervar": -7,
+            "workingtimenumbervar": 0,
+            "workingtimetotalnumbervar": 1,
+            "balancequantityvar": -1,
+            "differencenumbervar": 0,
+            "timeregistrationunitvar": "hours",
+            "timecheckedinexpectedvar": "",
+            "timecheckedoutexpectedvar": "",
+            "absencenumberexpectedvar": 0,
+            "timecheckedinvar": "",
+            "timecheckedoutvar": "",
+            "absencenumbervar": 0,
+            "popup1var": "nil",
+            "timesheetremark1var": "",
+            "timesheetremark2var": "",
+            "externaltimedaytotalvar": 1,
+            "internaltimedaytotalvar": 0,
+            "invoiceabletimedaytotalvar": 1,
+            "approvedbyvar": "",
+            "approvedvar": false,
+            "titletimeproposedvar": "Proposed Hours",
+            "departmentvar": "main_posting_rule_set",
+            "dayvar": "Monday",
+            "weekcalendarnumbervar": "40 Hours",
+            "remark1var": "",
+            "remark2var": "",
+            "remark3var": "",
+            "remark4var": "",
+            "remark5var": "",
+            "numberofexpensesheetsvar": 5,
+            "numberofmileagesheetsvar": 0,
+            "employeesubcontractornumbervar": "",
+            "level1titlenovar": "Family/Parent No.",
+            "level2titlenovar": "Child No.",
+            "level3titlenovar": "Level 3 No.",
+            "level4titlenovar": "Level 4 No.",
+            "level5titlenovar": "Level 5 No.",
+            "level1titlenamevar": "Family/Parent Name",
+            "level2titlenamevar": "Child Name",
+            "level3titlenamevar": "Level 3 Name",
+            "level4titlenamevar": "Level 4 Name",
+            "level5titlenamevar": "Level 5 Name",
+            "invoiceablepercentagedayvar": 1E+2,
+            "noninvoiceablepercentagedayvar": 0,
+            "periodstartvar": "2020-03-09",
+            "periodendvar": "2020-03-15",
+            "defaultjobnumbervar": "",
+            "defaultfavoritevar": "",
+            "resubmissionexplanationrequiredvar": false,
+            "resubmissionexplanationvar": "",
+            "checkinenabledvar": false,
+            "checkintimevar": 0,
+            "checkintimeroundedvar": 0,
+            "checkinbalancevar": -1,
+            "inopenpostingperiodvar": true,
+            "openpostingperiodmessagevar": "",
+            "enterupperpaneforceredrawvar": false,
+            "employeecompanynumbervar": "150",
+            "employeetransactiontypevar": "Time",
+            "employeemaxworkingtimeperdayvar": 24,
+            "numberoflinesvar": 1,
+            "expectedworkingtimenumbervar": 0,
+            "fixedworkingtimeontimesheetsvar": false,
+            "foundfixedworkingtimeontimesheetsvar": true
+          },
+          "links": {
+            "data:key:employeenumber_employee": {
+              "rel": "data:key:employeenumber_employee",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=150-109"
+            },
+            "data:key:card_defaultjobheader": {
+              "rel": "data:key:card_defaultjobheader",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber"
+            },
+            "data:key:card_employeenumber_employee": {
+              "rel": "data:key:card_employeenumber_employee",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=150-109"
+            },
+            "data:key:card_dailytimesheetheader": {
+              "rel": "data:key:card_dailytimesheetheader",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;thedate=2020-03-09;employeenumber=150-109"
+            },
+            "data:key:card_dailycheckinheader": {
+              "rel": "data:key:card_dailycheckinheader",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;thedate=2020-03-09;employeenumber=150-109"
+            },
+            "data:key:card_jobfavorite": {
+              "rel": "data:key:card_jobfavorite",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=150-109"
+            },
+            "action:update": {
+              "rel": "action:update",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0"
+            },
+            "action:copytimesheet": {
+              "rel": "action:copytimesheet",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=copytimesheet"
+            },
+            "action:actionsequence": {
+              "rel": "action:actionsequence",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=actionsequence"
+            },
+            "action:runreport": {
+              "rel": "action:runreport",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=runreport"
+            },
+            "action:emailonaction": {
+              "rel": "action:emailonaction",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=emailonaction"
+            },
+            "action:submittimesheet": {
+              "rel": "action:submittimesheet",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=submittimesheet"
+            },
+            "action:exportdataset": {
+              "rel": "action:exportdataset",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=exportdataset"
+            },
+            "action:printtimesheet": {
+              "rel": "action:printtimesheet",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=printtimesheet"
+            },
+            "action:submittimesheettemporarily": {
+              "rel": "action:submittimesheettemporarily",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/card/0/action;name=submittimesheettemporarily"
+            }
+          }
+        }
+      ],
+      "links": {}
+    },
+    "table": {
+      "meta": {
+        "paneName": "table",
+        "concurrencyControl": "\"card\"=\"8257672fe431a9cda836026d7c739dbdac1bc574\"",
+        "rowCount": 1,
+        "rowOffset": 0
+      },
+      "records": [
+        {
+          "meta": {
+            "rowNumber": 0,
+            "concurrencyControl": "\"card\"=\"8257672fe431a9cda836026d7c739dbdac1bc574\", \"table\"=\"bc1058fb9eeaa8ba46cf388c925226d7c2028399\""
+          },
+          "data": {
+            "employeenumber": "150-109",
+            "linenumber": 1,
+            "thedate": "2020-03-09",
+            "jobnumber": "1002",
+            "activitynumber": "100",
+            "taskname": "100",
+            "numberof": 1,
+            "entrytext": "Tax Planning",
+            "activitytype": "time",
+            "numbertransferred": 0,
+            "remark": "",
+            "description": "Boeing",
+            "internaljob": false,
+            "locationname": "1010",
+            "entityname": "1030",
+            "projectname": "16",
+            "purposename": "100-900",
+            "localspec1name": "110",
+            "localspec2name": "-",
+            "localspec3name": "-",
+            "specification1name": "10",
+            "specification2name": "201",
+            "specification3name": "2",
+            "companynumber": "100",
+            "transferredforposting": false,
+            "costtype": "turnover",
+            "approvedbysuperior": false,
+            "releasedbysuperior": false,
+            "uniquelinenumber": 1,
+            "permanentline": false,
+            "plannedfortheperiod": 0,
+            "estimatedtimetocompletion": 0,
+            "executed": false,
+            "instancekey": "330662a5-03e1-4d53-98fb-4f111a2b54aa",
+            "overtimetype": "nil",
+            "submitted": false,
+            "favorite": "",
+            "registrationnote": "",
+            "estimatedtimetocompletionmandays": 0,
+            "dailydescription": "",
+            "transactiontimestamp": "2020-03-09 10:05:19.950",
+            "numberproposed": 1,
+            "transactiontype": "Time",
+            "invoiceable": true,
+            "billingpricecurrency": 17500,
+            "billingpricebase": 17500,
+            "billingpriceenterprise": 17500,
+            "employeecategorynumber": "11",
+            "absencetype": "",
+            "timeregistrationunit": "hours",
+            "optionlistnumber1": "",
+            "selectedoption1": "",
+            "optionlistnumber2": "",
+            "selectedoption2": "",
+            "optionlistnumber3": "",
+            "selectedoption3": "",
+            "optionlistnumber4": "",
+            "selectedoption4": "",
+            "optionlistnumber5": "",
+            "selectedoption5": "",
+            "specification4name": "10",
+            "specification5name": "23",
+            "specification6name": "-",
+            "specification7name": "-",
+            "specification8name": "-",
+            "specification9name": "-",
+            "specification10name": "-",
+            "localspec4name": "-",
+            "localspec5name": "-",
+            "localspec6name": "-",
+            "localspec7name": "-",
+            "localspec8name": "-",
+            "localspec9name": "-",
+            "localspec10name": "-",
+            "purchaseordernumber": "",
+            "purchaseorderlinenumber": 0,
+            "jobnamevar": "Tax Review",
+            "customernumbervar": "10051",
+            "customernamevar": "Boeing",
+            "taskdescriptionvar": "Tax Planning",
+            "taskpathvar": "Prep",
+            "activitytextvar": "Billable Time",
+            "weeklineapprovalstatusvar": "nil",
+            "weeklineapprovedorrejectedbyvar": "",
+            "weeklineapprovaldatevar": "",
+            "weeklinecommentprojectmanagervar": "",
+            "tooltipjobvar": "<b>Job: </b>1002, Tax Review, N & B Equities, LLC",
+            "tooltiptaskvar": "<b>Task: </b>100, Tax Planning",
+            "tooltiptasklinebreakvar": "<br>",
+            "tooltipactivityvar": "<b>Activity: </b>100, Billable Time",
+            "tooltipconclusionvar": "The line is complete",
+            "linedetailsvar": "OK",
+            "linedetailstypevar": "ok",
+            "usesdailydescriptionsvar": false,
+            "billingpricetotalcurrencyvar": 17500,
+            "billingpricetotalbasevar": 17500,
+            "billingpricetotalenterprisevar": 17500,
+            "expenseamountbasetotalvar": 0,
+            "mileageamountbasetotalvar": 0,
+            "mileagenumberoftotalvar": 0,
+            "customerlevelnamevar": "Family/Parent",
+            "level1customernumbervar": "10051",
+            "level2customernumbervar": "",
+            "level3customernumbervar": "",
+            "level4customernumbervar": "",
+            "level5customernumbervar": "",
+            "level1customernamevar": "N & B Equities, LLC",
+            "level2customernamevar": "",
+            "level3customernamevar": "",
+            "level4customernamevar": "",
+            "level5customernamevar": "",
+            "weektextheaderinstancekeyvar": "",
+            "daytextheaderinstancekeyvar": "",
+            "weektextheaderhastextvar": false,
+            "daytextheaderhastextvar": false,
+            "timeroundingunitvar": 0,
+            "conversationinstancekeyvar": "",
+            "starttime": "",
+            "stoptime": "",
+            "starttimemillis": 0,
+            "stoptimemillis": 0,
+            "totalelapsedtime": 0,
+            "timerrunning": false,
+            "transferred": false,
+            "timeremployeenumber": "",
+            "timerdate": "",
+            "timerstartdate": "",
+            "timerenddate": "",
+            "elapsedtime": 0
+          },
+          "links": {
+            "data:key:specification3name_specification3": {
+              "rel": "data:key:specification3name_specification3",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification3name=2"
+            },
+            "data:key:specification2name_specification2": {
+              "rel": "data:key:specification2name_specification2",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification2name=201"
+            },
+            "data:key:entityname_entity": {
+              "rel": "data:key:entityname_entity",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;entityname=1030"
+            },
+            "data:key:optionlistnumber1_optionlist": {
+              "rel": "data:key:optionlistnumber1_optionlist",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;optionlistnumber"
+            },
+            "data:key:optionlistnumber4_optionlist": {
+              "rel": "data:key:optionlistnumber4_optionlist",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;optionlistnumber"
+            },
+            "data:key:specification1name_specification1": {
+              "rel": "data:key:specification1name_specification1",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification1name=10"
+            },
+            "data:key:absencetype_absencetype": {
+              "rel": "data:key:absencetype_absencetype",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100;absencetypetitle"
+            },
+            "data:key:jobfavorite": {
+              "rel": "data:key:jobfavorite",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;favorite;employeenumber=150-109"
+            },
+            "data:key:locationname_location": {
+              "rel": "data:key:locationname_location",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;locationname=1010"
+            },
+            "data:key:employeecategorynumber_employeecategorymember": {
+              "rel": "data:key:employeecategorynumber_employeecategorymember",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=150-109;employeecategorynumber=11"
+            },
+            "data:key:theoption_1": {
+              "rel": "data:key:theoption_1",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name;optionlistnumber"
+            },
+            "data:key:jobnumber_jobheader": {
+              "rel": "data:key:jobnumber_jobheader",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;jobnumber=1002"
+            },
+            "data:key:purposename_purpose": {
+              "rel": "data:key:purposename_purpose",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;purposename=100-900"
+            },
+            "data:key:theoption_3": {
+              "rel": "data:key:theoption_3",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name;optionlistnumber"
+            },
+            "data:key:theoption_2": {
+              "rel": "data:key:theoption_2",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name;optionlistnumber"
+            },
+            "data:key:specification9name_specification9": {
+              "rel": "data:key:specification9name_specification9",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification9name=-"
+            },
+            "data:key:optionlistnumber3_optionlist": {
+              "rel": "data:key:optionlistnumber3_optionlist",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;optionlistnumber"
+            },
+            "data:key:theoption_5": {
+              "rel": "data:key:theoption_5",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name;optionlistnumber"
+            },
+            "data:key:theoption_4": {
+              "rel": "data:key:theoption_4",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;name;optionlistnumber"
+            },
+            "data:key:specification8name_specification8": {
+              "rel": "data:key:specification8name_specification8",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification8name=-"
+            },
+            "data:key:specification7name_specification7": {
+              "rel": "data:key:specification7name_specification7",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification7name=-"
+            },
+            "data:key:activitynumber_activity": {
+              "rel": "data:key:activitynumber_activity",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;activitynumber=100"
+            },
+            "data:key:specification6name_specification6": {
+              "rel": "data:key:specification6name_specification6",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification6name=-"
+            },
+            "data:key:projectname_project": {
+              "rel": "data:key:projectname_project",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;projectname=16"
+            },
+            "data:key:specification5name_specification5": {
+              "rel": "data:key:specification5name_specification5",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification5name=23"
+            },
+            "data:key:specification4name_specification4": {
+              "rel": "data:key:specification4name_specification4",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification4name=10"
+            },
+            "data:key:conversationinstancekey_conversation": {
+              "rel": "data:key:conversationinstancekey_conversation",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;instancekey"
+            },
+            "data:key:specification10name_specification10": {
+              "rel": "data:key:specification10name_specification10",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;specification10name=-"
+            },
+            "data:key:dailytimesheetheader": {
+              "rel": "data:key:dailytimesheetheader",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;thedate=2020-03-09;employeenumber=150-109"
+            },
+            "data:key:companynumber_companyinformation": {
+              "rel": "data:key:companynumber_companyinformation",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;companynumber=100"
+            },
+            "data:key:employeenumber_employee": {
+              "rel": "data:key:employeenumber_employee",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;employeenumber=150-109"
+            },
+            "data:key:purchaseorderline": {
+              "rel": "data:key:purchaseorderline",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;linenumber=0;purchaseordernumber"
+            },
+            "data:key:optionlistnumber5_optionlist": {
+              "rel": "data:key:optionlistnumber5_optionlist",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;optionlistnumber"
+            },
+            "data:key:optionlistnumber2_optionlist": {
+              "rel": "data:key:optionlistnumber2_optionlist",
+              "template": "https://ash50mac.us.deltek.com/containers/v1/d50c/{container}/data;optionlistnumber"
+            },
+            "action:insert": {
+              "rel": "action:insert",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/init?row=0"
+            },
+            "action:create": {
+              "rel": "action:create",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table?row=0"
+            },
+            "action:update": {
+              "rel": "action:update",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0"
+            },
+            "action:delete": {
+              "rel": "action:delete",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0"
+            },
+            "action:starttimer": {
+              "rel": "action:starttimer",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=starttimer"
+            },
+            "action:actionsequence": {
+              "rel": "action:actionsequence",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=actionsequence"
+            },
+            "action:runreport": {
+              "rel": "action:runreport",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=runreport"
+            },
+            "action:createjobfavorite": {
+              "rel": "action:createjobfavorite",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=createjobfavorite"
+            },
+            "action:stoptimer": {
+              "rel": "action:stoptimer",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=stoptimer"
+            },
+            "action:emailonaction": {
+              "rel": "action:emailonaction",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=emailonaction"
+            },
+            "action:createconversation": {
+              "rel": "action:createconversation",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=createconversation"
+            },
+            "action:transfertime": {
+              "rel": "action:transfertime",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=transfertime"
+            },
+            "action:exportdataset": {
+              "rel": "action:exportdataset",
+              "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/0/action;name=exportdataset"
+            }
+          }
+        }
+      ],
+      "links": {
+        "action:add": {
+          "rel": "action:add",
+          "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table/init"
+        },
+        "action:create": {
+          "rel": "action:create",
+          "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any/table"
+        }
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "rel": "self",
+      "href": "https://ash50mac.us.deltek.com/containers/v1/d50c/dailytimeregistration/data;any"
+    }
+  }
+}

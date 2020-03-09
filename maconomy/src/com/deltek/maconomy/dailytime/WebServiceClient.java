@@ -29,8 +29,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.deltek.maconomy.customerentry.CustomerEntries;
-import com.deltek.maconomy.expense.ExpenseSheets;
+import com.deltek.maconomy.showcustomerreconciliations.Showcustomerreconciliations;
+import com.deltek.maconomy.expensesheets.Expensesheets;
+import com.deltek.maconomy.dailytimeregistration.Dailytimeregistration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -55,7 +56,7 @@ public class WebServiceClient {
 
     private static final Logger log = LoggerFactory.getLogger(WebServiceClient.class);
 
-    private static final String BASE_API_PATH = "https://ash50mac.us.deltek.com/containers/v1/d50c";//"https://fti-bld.deltekenterprise.com/containers/v1/bldfti";
+    private static final String BASE_API_PATH = "https://mac1.deltekmaconomy.com/containers/v1/d25c";//"https://ash50mac.us.deltek.com/containers/v1/d50c";
     private static final String BASE_API_PATH_TIME = BASE_API_PATH + "/dailytimeregistration/data;any";
     private static final String BASE_API_PATH_EXPENSE = BASE_API_PATH + "/expensesheets/data;";
     private static final String BASE_API_PATH_AR = BASE_API_PATH + "/showcustomerreconciliations/filter?restriction=";
@@ -63,7 +64,7 @@ public class WebServiceClient {
 
     public static String insertDailyTime(String employeeNumberVar, String dateVar, Double hours, String jobNumber, String taskName){
         ClientConfig configuration = new ClientConfig();
-        configuration.register(DailyTimeRegistration.class);
+        configuration.register(Dailytimeregistration.class);
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
@@ -76,11 +77,11 @@ public class WebServiceClient {
         headers.put("Authorization", auth);
 
         log.info("sending request to url: {}", getUrl);
-        DailyTimeRegistration dt = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(DailyTimeRegistration.class);
-        List<Record_> records = dt.getPanes().getCard().getRecords();
+        Dailytimeregistration dt = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(Dailytimeregistration.class);
+        List<com.deltek.maconomy.dailytimeregistration.Record> records = dt.getPanes().getCard().getRecords();
         if(records.size() >=1){
-            Record_ card = records.get(0);
-            Meta____ meta = card.getMeta();
+            com.deltek.maconomy.dailytimeregistration.Record card = records.get(0);
+            com.deltek.maconomy.dailytimeregistration.Meta__ meta = card.getMeta();
             String concurrencyControl = meta.getConcurrencyControl();
             log.info("found concurrency control key: {}", concurrencyControl);
             ArrayList<Object> concControl = new ArrayList<Object>();
@@ -88,11 +89,11 @@ public class WebServiceClient {
             headers.put("Maconomy-Concurrency-Control", concControl);
 
             String postUrl = BASE_API_PATH_TIME + "/table" + queryParams;
-            Data data = new Data();
+            com.deltek.maconomy.dailytimeregistration.Data_ data = new com.deltek.maconomy.dailytimeregistration.Data_();
             data.setJobnumber(jobNumber);
             data.setTaskname(taskName);
             data.setNumberof(hours);
-            Record table = new Record();
+            com.deltek.maconomy.dailytimeregistration.Record_ table = new com.deltek.maconomy.dailytimeregistration.Record_();
             table.setData(data);
             Response response = client.target(postUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).post(Entity.entity(table, MediaType.APPLICATION_JSON));
             return response.getStatusInfo().toString();
@@ -102,7 +103,7 @@ public class WebServiceClient {
 
     public static String insertExpense(String expenseSheetNumber, String jobNumber, String taskName, Double quantity){
         ClientConfig configuration = new ClientConfig();
-        configuration.register(ExpenseSheets.class);
+        configuration.register(Expensesheets.class);
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
@@ -115,12 +116,12 @@ public class WebServiceClient {
         headers.put("Authorization", auth);
 
         log.info("sending request to url: {}", getUrl);
-        ExpenseSheets es = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(ExpenseSheets.class);
-        List<com.deltek.maconomy.expense.Record_> records = es.getPanes().getCard().getRecords();
+        Expensesheets es = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(Expensesheets.class);
+        List<com.deltek.maconomy.expensesheets.Record> records = es.getPanes().getCard().getRecords();
         String jobNum = "";
         if(records.size() >= 1){
-            com.deltek.maconomy.expense.Record_ card = records.get(0);
-            com.deltek.maconomy.expense.Meta____ meta = card.getMeta();
+            com.deltek.maconomy.expensesheets.Record card = records.get(0);
+            com.deltek.maconomy.expensesheets.Meta__ meta = card.getMeta();
             String concurrencyControl = meta.getConcurrencyControl();
             log.info("found concurrency control key: {}", concurrencyControl);
             ArrayList<Object> concControl = new ArrayList<Object>();
@@ -128,11 +129,11 @@ public class WebServiceClient {
             headers.put("Maconomy-Concurrency-Control", concControl);
 
             String postUrl = getUrl + "/table";
-            com.deltek.maconomy.expense.Data data = new com.deltek.maconomy.expense.Data();
+            com.deltek.maconomy.expensesheets.Data_ data = new com.deltek.maconomy.expensesheets.Data_();
             data.setJobnumber(jobNumber);
             data.setTaskname(taskName);
             data.setNumberof(quantity);
-            com.deltek.maconomy.expense.Record table = new com.deltek.maconomy.expense.Record();
+            com.deltek.maconomy.expensesheets.Record_ table = new com.deltek.maconomy.expensesheets.Record_();
             table.setData(data);
             Response response = client.target(postUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).post(Entity.entity(table, MediaType.APPLICATION_JSON));
             String status = response.getStatusInfo().toString();
@@ -147,7 +148,7 @@ public class WebServiceClient {
 
     public static String getCashReceipts(String customerNumber, String toDate, String fromDate){
         ClientConfig configuration = new ClientConfig();
-        configuration.register(CustomerEntries.class);
+        configuration.register(Showcustomerreconciliations.class);
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
@@ -161,12 +162,12 @@ public class WebServiceClient {
         auth.add(AUTH_HEADER);
         headers.put("Authorization", auth);
 
-        CustomerEntries customerEntries = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(CustomerEntries.class);
-        List<com.deltek.maconomy.customerentry.Record> records = customerEntries.getPanes().getFilter().getRecords();
+        Showcustomerreconciliations customerEntries = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(Showcustomerreconciliations.class);
+        List<com.deltek.maconomy.showcustomerreconciliations.Record> records = customerEntries.getPanes().getFilter().getRecords();
         if(records.size() >=1){
             StringBuilder sb = new StringBuilder();
-            for(com.deltek.maconomy.customerentry.Record r: records){
-                com.deltek.maconomy.customerentry.Data data = r.getData();
+            for(com.deltek.maconomy.showcustomerreconciliations.Record r: records){
+                com.deltek.maconomy.showcustomerreconciliations.Data data = r.getData();
                 if(data.getEntrytype().equalsIgnoreCase("credit_general_journal")){
                     if(fromDate.isEmpty() && data.getEntrydate().equalsIgnoreCase(toDate)){
                         Integer creditBase = data.getCreditbase()/100;
@@ -191,7 +192,7 @@ public class WebServiceClient {
 
     public static String getInvoicesDue(){
         ClientConfig configuration = new ClientConfig();
-        configuration.register(CustomerEntries.class);
+        configuration.register(Showcustomerreconciliations.class);
         configuration.register(JacksonJsonProvider.class);
 
         Client client = ClientBuilder.newClient(configuration);
@@ -205,15 +206,15 @@ public class WebServiceClient {
         auth.add(AUTH_HEADER);
         headers.put("Authorization", auth);
 
-        CustomerEntries customerEntries = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(CustomerEntries.class);
-        List<com.deltek.maconomy.customerentry.Record> records = customerEntries.getPanes().getFilter().getRecords();
+        Showcustomerreconciliations customerEntries = client.target(getUrl).request(MediaType.APPLICATION_JSON).headers(headers).accept(MediaType.APPLICATION_JSON).get(Showcustomerreconciliations.class);
+        List<com.deltek.maconomy.showcustomerreconciliations.Record> records = customerEntries.getPanes().getFilter().getRecords();
 
         if(records.size() >=1){
             Integer invoicesSize = records.size();
             StringBuilder sb = new StringBuilder();
             sb.append("I found " + invoicesSize.toString() + " invoices due for more than 90 days for this year. ");
-            for(com.deltek.maconomy.customerentry.Record r: records){
-                com.deltek.maconomy.customerentry.Data data = r.getData();
+            for(com.deltek.maconomy.showcustomerreconciliations.Record r: records){
+                com.deltek.maconomy.showcustomerreconciliations.Data data = r.getData();
                 Integer debitBase = data.getDebitbase()/100;
                 String name1 = data.getName1();
                 sb.append(name1 + " owes you " + debitBase + " dollars. ");
