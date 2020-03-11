@@ -85,7 +85,11 @@ public class DailyTimeSpeechlet implements Speechlet {
             return getInvoicesDue(intent);
         } else if ("AMAZON.HelpIntent".equals(intentName)) {
             return getHelpResponse();
-        } else {
+        } else if ("AMAZON.StopIntent".equals(intentName)) {
+            return getExitResponse();
+        }else if ("AMAZON.CancelIntent".equals(intentName)) {
+            return getExitResponse();
+        }else {
             throw new SpeechletException("Invalid Intent");
         }
     }
@@ -267,6 +271,26 @@ public class DailyTimeSpeechlet implements Speechlet {
         reprompt.setOutputSpeech(speech);
 
         return SpeechletResponse.newAskResponse(speech, reprompt, card);
+    }
+
+    /**
+     * Creates a {@code SpeechletResponse} for the stop intent.
+     *
+     * @return SpeechletResponse spoken and visual response for the given intent
+     */
+    private SpeechletResponse getExitResponse() {
+        String speechText = "Goodbye";
+
+        // Create the Simple card content.
+        SimpleCard card = new SimpleCard();
+        card.setTitle("DailyTime");
+        card.setContent(speechText);
+
+        // Create the plain text output.
+        PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
+        speech.setText(speechText);
+
+        return SpeechletResponse.newTellResponse(speech, card);
     }
 
     /**
