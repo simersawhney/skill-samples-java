@@ -6,7 +6,7 @@
         http://aws.amazon.com/apache2.0/
 
     or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
- */
+
 package com.deltek.maconomy.dailytime;
 
 import com.amazon.speech.slu.Slot;
@@ -37,15 +37,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-/**
- * This sample shows how to create a simple speechlet for handling speechlet requests.
- */
+
 public class DailyTimeSpeechlet implements Speechlet {
     private static final Logger log = LoggerFactory.getLogger(DailyTimeSpeechlet.class);
 
-    /**
-     * Constant defining attribute key for the intent slot key.
-     */
+
     private static final String SLOT_HOUR = "hourValue";
     private static final String SLOT_DIST = "mileValue";
     private static final String SLOT_DATE = "dateValue";
@@ -102,11 +98,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         // any cleanup logic goes here
     }
 
-    /**
-     * Creates and returns a {@code SpeechletResponse} with a welcome message.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse getWelcomeResponse() {
         String speechText = "Welcome to the Maconomy Alexa Skill, you can register hours or mileage on a job";
 
@@ -126,11 +118,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newAskResponse(speech, reprompt, card);
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the DailyTime intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse insertDailyTime(Intent intent) {
         Double hours = getHours(intent);
         log.info("received {} hours", hours);
@@ -162,11 +150,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newTellResponse(speech, card);
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the Expense intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse insertExpense(Intent intent) {
         Integer miles = getMiles(intent);
         log.info("received {} miles", miles);
@@ -196,11 +180,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newTellResponse(speech, card);
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the CashReceipts intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse getCashReceipts(Intent intent) {
         String toDate = getDate(intent);
         log.info("received toDate {}", toDate);
@@ -226,11 +206,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newTellResponse(speech, card);
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the CashReceipts intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse getInvoicesDue(Intent intent) {
         String result = WebServiceClient.getInvoicesDue();
         log.info("getInvoicesDue result ={}", result);
@@ -249,11 +225,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newTellResponse(speech, card);
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the help intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse getHelpResponse() {
         String speechText = "You can ask Maconomy to register 5 hours for October twentieth";
 
@@ -273,11 +245,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newAskResponse(speech, reprompt, card);
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the stop intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+
     private SpeechletResponse getExitResponse() {
         String speechText = "Goodbye";
 
@@ -293,15 +261,7 @@ public class DailyTimeSpeechlet implements Speechlet {
         return SpeechletResponse.newTellResponse(speech, card);
     }
 
-    /**
-     * Function to accept an intent containing a Day slot (date object) and return the String
-     * representation of that slot value. If the user provides a date, then use that, otherwise use
-     * today.
-     *
-     * @param intent
-     *            the intent object containing the day slot
-     * @return the Calendar representation of that date
-     */
+
     private String getDate(Intent intent) {
         Slot daySlot = intent.getSlot(SLOT_DATE);
         LocalDate date;
@@ -419,3 +379,4 @@ public class DailyTimeSpeechlet implements Speechlet {
         return miles;
     }
 }
+ */
