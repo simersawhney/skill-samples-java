@@ -42,7 +42,7 @@ public class InvoicesDueIntentHandler implements RequestHandler {
             .withSimpleCard("InvoicesDue", speechText)
             .withSpeech(speechText)
             .withReprompt(repromptText)
-            .withShouldEndSession(false)
+            .withShouldEndSession(true)
             .build();
     }
 

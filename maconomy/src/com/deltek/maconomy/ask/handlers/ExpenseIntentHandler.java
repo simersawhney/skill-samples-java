@@ -55,7 +55,7 @@ public class ExpenseIntentHandler implements RequestHandler {
             .withSimpleCard("Expense", speechText)
             .withSpeech(speechText)
             .withReprompt(repromptText)
-            .withShouldEndSession(false)
+            .withShouldEndSession(true)
             .build();
     }
 

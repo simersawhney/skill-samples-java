@@ -56,7 +56,7 @@ public class WebServiceClient {
 
     private static final Logger log = LoggerFactory.getLogger(WebServiceClient.class);
 
-    private static final String BASE_API_PATH = "https://ash50mac.us.deltek.com/containers/v1/d50c";//"https://mac1.deltekmaconomy.com/containers/v1/d25c";
+    private static final String BASE_API_PATH = "https://mac1.deltekmaconomy.com/containers/v1/d25c";//"https://ash50mac.us.deltek.com/containers/v1/d50c";
     private static final String BASE_API_PATH_TIME = BASE_API_PATH + "/dailytimeregistration/data;any";
     private static final String BASE_API_PATH_EXPENSE = BASE_API_PATH + "/expensesheets/data;";
     private static final String BASE_API_PATH_AR = BASE_API_PATH + "/showcustomerreconciliations/filter?restriction=";

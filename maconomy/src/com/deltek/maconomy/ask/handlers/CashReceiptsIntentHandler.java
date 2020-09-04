@@ -63,7 +63,7 @@ public class CashReceiptsIntentHandler implements RequestHandler {
             .withSimpleCard("CashReceipts", speechText)
             .withSpeech(speechText)
             .withReprompt(repromptText)
-            .withShouldEndSession(false)
+            .withShouldEndSession(true)
             .build();
 
     }
@@ -98,6 +98,7 @@ public class CashReceiptsIntentHandler implements RequestHandler {
             && dateSlot.getResolutions() != null
             && dateSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
             String slotValue = dateSlot.getValue();
+            log.debug("from date slot value {}", slotValue);
             if(slotValue.matches("\\d{4}-W\\d{2}")){
                 try {
                     date = LocalDate.parse(slotValue+"-1", DateTimeFormatter.ISO_WEEK_DATE);
@@ -105,13 +106,13 @@ public class CashReceiptsIntentHandler implements RequestHandler {
                 }catch (DateTimeParseException e){
                     log.error("Unable to parse slotValue {} to date", slotValue);
                     log.error(e.getMessage());
-                    return "";
+                    return LocalDate.now().toString();
                 }
             }else{
-                return "";
+                return LocalDate.now().toString();
             }
         }else{
-            return "";
+            return LocalDate.now().toString();
         }
     }
 }

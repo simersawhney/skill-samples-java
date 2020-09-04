@@ -68,7 +68,7 @@ public class DailyTimeIntentHandler implements RequestHandler {
             .withSimpleCard("DailyTime", speechText)
             .withSpeech(speechText)
             .withReprompt(repromptText)
-            .withShouldEndSession(false)
+            .withShouldEndSession(true)
             .build();
     }
 
@@ -98,18 +98,7 @@ public class DailyTimeIntentHandler implements RequestHandler {
         Map<String, Slot> slots = intent.getSlots();
         Slot hourSlot = slots.get(SLOT_HOUR);
         //Slot hourSlot = intent.getSlot(SLOT_HOUR);
-        String hours = "PT0H";
-        if(hourSlot != null
-            && hourSlot.getResolutions() != null
-            && hourSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")){
-            try {
-                hours = hourSlot.getValue();
-            } catch (NumberFormatException e){
-                hours = "PT0H";
-            }
-        }else{
-            hours = "PT0H";
-        }
+        String hours = hourSlot.getValue();
         log.info("obtained following slot value for hours from intent:{}", hours);
 
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
@@ -123,5 +112,20 @@ public class DailyTimeIntentHandler implements RequestHandler {
             log.error("Could not convert hours to double: " + e.getMessage());
         }
         return hoursDouble;
+    }
+
+    private String getHoursSlot(Slot hourSlot) {
+        if(hourSlot != null
+            && hourSlot.getResolutions() != null
+            && hourSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")){
+            try {
+                return hourSlot.getValue();
+            } catch (NumberFormatException e){
+                log.error("Error getting hour slot value: " + e.getMessage());
+                return "PT0H";
+            }
+        }else{
+            return "PT0H";
+        }
     }
 }
